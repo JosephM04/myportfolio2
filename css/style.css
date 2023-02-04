@@ -9,7 +9,6 @@ body {
   font-family: 'Barlow', sans-serif;
 }
 
-
 :root {
   --whiteText:#ccc;
 }
@@ -34,7 +33,7 @@ body {
   left:50%;
   transform:translate(-50%, -50%);
   z-index:3;
-  transition: .1s;
+  transition: .01s;
 }
 .header {
   display: flex;
@@ -59,7 +58,7 @@ body {
   
   100% { text-shadow: 2px 2px 15px #000; color:white;}
 }
-/* nav bar, usin display flex, position sticky to see it on every part of the page */
+/* nav bar, using display flex, position sticky to see it on every part of the page */
 .navbar {
   z-index: 500;
   display: flex;
@@ -221,7 +220,7 @@ body {
 #email:hover {
   text-decoration: underline;
 }
-/* responsive for content */
+/* responsive */
 @media screen and (max-width:1000px) {
   .bg-bar{width: 95%;}
 }
