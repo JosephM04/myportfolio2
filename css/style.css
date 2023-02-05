@@ -9,9 +9,6 @@ body {
   font-family: 'Barlow', sans-serif;
 }
 
-:root {
-  --whiteText:#ccc;
-}
 
 .header-container {
   height: 600px;
@@ -46,7 +43,7 @@ body {
 .h-items {
   animation-name: h-items;
   animation-duration: 3s;
-  animation-iteration-count: 4;
+  animation-iteration-count: 2;
   font-size:45px;
   text-shadow: 2px 2px 15px #000;
   text-align: center;
@@ -63,36 +60,34 @@ body {
   z-index: 500;
   display: flex;
   justify-content: center;
-  background: #333;
   position: -webkit-sticky;
   position: sticky;
   top:0;
 }
 .navbar a{
+  border-radius:5px;
   text-decoration: none;
-  color:#fff;
+  /* color:#fff; */
   padding: 14px 30px;
   text-align: center;
 }
-.navbar a:hover {
-  background-color: #ddd;
-  color:black;
-}
+
 /*  */
 .container {
   width: 100%;
   z-index: 100;
-  background-image: linear-gradient(to right, #3a454d 0%, #596164 100%);  display: flex;
+  display: flex;
   flex-wrap:wrap;
   justify-content: center;
   text-align: justify;
 }
 /* All related to profile part */
 .prof-img-div {
-  width: 35%;
-  background-color:#61686d
+  width: 35%; 
 }
+
 .prof-img {
+  background-color:transparent;
   -webkit-filter: grayscale(100%);
   filter:grayscale(100%);
   height: 100%;
@@ -101,14 +96,10 @@ body {
   object-fit: cover; 
 }
 .prof {
-  background-color:#61686d ;
+  background-color:transparent;
   height: auto;
   width: 65%;
   padding:20px;
-  color:var(--whiteText);
-}
-.prof h3 {
-  color: black;
 }
 
 /* img {
@@ -117,12 +108,13 @@ body {
 } */
 /* Barra de porcentaje de mis habilidades, configuración general para todas las barras*/
 .bg-bar {
-  margin: 5px;
+  margin: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
   height:30px;
   text-align: center;
   width: 80%;
+  box-shadow: 0 0 3px #333;
 }
 .bar {
   border-radius: 5px;
@@ -168,11 +160,11 @@ body {
   align-items: center;
   justify-content: center;
   height: 65px;
-  background-color: #1f1f1f;
+  background: #222;
 }
 .cv-download a {
   padding:10px;
-  color:var(--whiteText);
+  color:#ccc;
   font-size: 25px;
   text-decoration: none;
   box-shadow: inset 0 0 0 0 #ffffff;
@@ -180,7 +172,7 @@ body {
 }
 .cv-download a:hover {
   color: #000;
-  box-shadow: inset 200px 0 0 0 #ffffff;;
+  box-shadow: inset 200px 0 0 0 #ffffff;
 }
 .footer {
   padding:20px;

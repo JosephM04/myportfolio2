@@ -4,72 +4,70 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- main css -->
      <link rel="stylesheet" href="css/style.css"/>
-     
+     <!-- css for dark and light toggle button -->
+     <link rel="stylesheet" href="css/darklight.css"/>
      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,700;1,100&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,700;1,100&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <title>Portfolio Joseph Méndez</title>
 </head>
-<body class="body">
-     <div class="bg"></div>
+<body>
+  <!-- Change betwen dark and light theme-->
+  <button class="dark-light dark">
+     <i class='dark-light-icon bx bx-sun'></i>
+  </button> 
+
   <div class="header-container contenedor" id="inicio">
+    <div class="bg"></div>
     <div class="header">
-      <h1 id="name" class="h-items" split-by="letter" letter-animation="hover">Joseph Méndez</h1>
+      <h1 id="name" class="h-items" >Joseph Méndez</h1>
       <!-- <h2 id="profession" class="h-items" split-by="letter" letter-animation="hover">Front End Web Developer</h2> -->
     </div>       
   </div>
-  <div class="navbar">
-    <a href="#inicio">Home</a>
-    <a href="proyects.html">Proyects</a>
-    <a href="#contacto">Contact</a>   
-    <!-- <button class="dark-light-btn"><img src="" alt=""></button> -->
-          <!-- <div class="switch-button"> -->
-               <!-- Checkbox -->
-               <!-- <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox"> -->
-               <!-- Botón -->
-               <!-- <label for="switch-label" class="switch-button__label"></label>
-          </div> -->
+  <div class="navbar nv-dark">
+    <a class="nav-a-dark" href="#inicio">Home</a>
+    <a class="nav-a-dark" href="proyects.html">Proyects</a>
+    <a class="nav-a-dark" href="#contacto">Contact</a>   
   </div>
 
-  <div class="container">
-    <div class="prof-img-div">
-    <img class="prof-img" src="Imagenes/JosephPerfil.jpg" alt="Joseph Mendez Ayard">
-    </div>
+     <div class="container container-dark">
+          <div class="prof-img-div">
+          <img class="prof-img" src="Imagenes/JosephPerfilSinFondo.png" alt="Joseph Mendez Ayard">
+          </div>
     
-    <div class="prof">
-       <h2>About Me:</h2>
-       
-       <p> I have a Bachelor's degree in <b>Computer Systems Engineering</b>, graduated this year, 2022, in the Technological University of Panama, Universidad Tecnológica de Panamá (UTP) in Spanish.<br>
-            I am working now to become an excelent Front End developer, Back End developer and my last objective is to be a Senior Full Stack developer. I am putting all my effort to achieve that
-       
-       <br><br>At the moment, those are my skills.</p>
-       <h3>HTML</h3>
-       <div class="bg-bar bg-html">
-             <div class="bar bar-html">70% </div>
-       </div>
-       <h3>CSS</h3>
-       <div class="bg-bar bg-css">
-             <div class="bar bar-css">75% </div>
-       </div>
-       <h3>JavaScript</h3>
-       <div class="bg-bar bg-js">
-             <div class="bar bar-js">55% </div>
-       </div>
-       <h3>Git</h3>
-       <div class="bg-bar bg-git">
-             <div class="bar bar-git">20% </div>
-       </div>
-       <h3>Python</h3>
-       <div class="bg-bar bg-python">
-             <div class="bar bar-python">30% </div>
-       </div>
-
+           <div class="prof .prof-light">
+               <h2>About Me:</h2>
+               <p> I have a Bachelor's degree in <b>Computer Systems Engineering</b>, graduated this year, 2022, in the Technological University of Panama, Universidad Tecnológica de Panamá (UTP) in Spanish.<br>
+                    I am working now to become an excelent Front End developer, Back End developer and my last objective is to be a Senior Full Stack developer. I am putting all my effort to achieve that
+               <br><br>At the moment, those are my skills.</p>
+               <h3>HTML</h3>
+               <div class="bg-bar bg-html">
+                 <div class="bar bar-html">70% </div>
+               </div>
+                <h3>CSS</h3>
+                <div class="bg-bar bg-css">
+                      <div class="bar bar-css">75% </div>
+                </div>
+                <h3>JavaScript</h3>
+                <div class="bg-bar bg-js">
+                      <div class="bar bar-js">55% </div>
+                </div>
+                <h3>Git</h3>
+                <div class="bg-bar bg-git">
+                      <div class="bar bar-git">20% </div>
+                </div>
+                <h3>Python</h3>
+                <div class="bg-bar bg-python">
+                      <div class="bar bar-python">30% </div>
+                </div>
+        
+           </div>
      </div>
-     </div>
-     <div class="cv-download">
-          <i><a href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i>
+     <div class="cv-download .cv-download-dark">
+          <i><a class="dl-cv-dark" href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i>
      </div>
          
      </div>
@@ -85,6 +83,7 @@
           </div>
      </div>
       
+<script src="js/dark-light.js"></script>
 <script src="js/headerbg.js"></script>
 </body>
 </html>

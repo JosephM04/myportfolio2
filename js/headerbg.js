@@ -1,4 +1,4 @@
-const root = document.querySelector(".container");
+const root = document.querySelector(".contenedor");
 const header = document.querySelector(".bg")
 
 root.addEventListener("mousemove", function(e) {
