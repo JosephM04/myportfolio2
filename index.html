@@ -14,35 +14,40 @@
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <title>Portfolio Joseph Méndez</title>
 </head>
-<body>
+<body class="body">
   <!-- Change betwen dark and light theme-->
   <button class="dark-light dark">
      <i class='dark-light-icon bx bx-sun'></i>
   </button> 
-
-  <div class="header-container contenedor" id="inicio">
-    <div class="bg"></div>
-    <div class="header">
-      <h1 id="name" class="h-items" >Joseph Méndez</h1>
+  
+  <div class="navbar nv-dark">
+     <a class="nav-a-dark" href="#inicio">Home</a>
+     <a class="nav-a-dark" href="#proyectos">Proyects</a>
+     <a class="nav-a-dark" href="#contacto">Contact</a>   
+   </div>
+  
+   <div class="header-container contenedor" id="inicio">
+     <div class="bg"></div>
+     <div class="header">
+          <div class="prof-img-div">
+               <img class="prof-img" src="Imagenes/JosephPerfilSinFondo.png" alt="Joseph Mendez Ayard">
+          </div>
+          <div class="prof-name">
+               <h1 id="name" class="h-items" >Joseph Méndez</h1>
+               <p> Graduated a Bachelor's degree in <b>Computer Systems Engineering</b>, this year, 2022, in the Technological University of Panama or Universidad Tecnológica de Panamá (UTP) in Spanish.<br>
+                    This is my passion so i am working hard to become an excelent Front End developer and maybe one day a FullStack developer.
+          </div>
+          
       <!-- <h2 id="profession" class="h-items" split-by="letter" letter-animation="hover">Front End Web Developer</h2> -->
     </div>       
   </div>
-  <div class="navbar nv-dark">
-    <a class="nav-a-dark" href="#inicio">Home</a>
-    <a class="nav-a-dark" href="proyects.html">Proyects</a>
-    <a class="nav-a-dark" href="#contacto">Contact</a>   
-  </div>
+
 
      <div class="container container-dark">
-          <div class="prof-img-div">
-          <img class="prof-img" src="Imagenes/JosephPerfilSinFondo.png" alt="Joseph Mendez Ayard">
-          </div>
+         
     
            <div class="prof .prof-light">
-               <h2>About Me:</h2>
-               <p> I have a Bachelor's degree in <b>Computer Systems Engineering</b>, graduated this year, 2022, in the Technological University of Panama, Universidad Tecnológica de Panamá (UTP) in Spanish.<br>
-                    I am working now to become an excelent Front End developer, Back End developer and my last objective is to be a Senior Full Stack developer. I am putting all my effort to achieve that
-               <br><br>At the moment, those are my skills.</p>
+               <h2>Skils</h2>
                <h3>HTML</h3>
                <div class="bg-bar bg-html">
                  <div class="bar bar-html">70% </div>
@@ -66,8 +71,21 @@
         
            </div>
      </div>
+
+     <h2 class="h2-proyectos">Proyectos</h2>
+     
+     <div class="proyectos" id="proyectos">
+          <div class="amara-cedrus">
+               <a href="https://amaracedrus.netlify.app/">Amara Cedrus</a>
+               <iframe src="https://amaracedrus.netlify.app/" title="Amara Cedrus"></iframe>
+          </div>
+          <div class="proyecto2">
+               
+          </div>
+     </div>
+
      <div class="cv-download .cv-download-dark">
-          <i><a class="dl-cv-dark" href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i>
+          <!-- <i><a class="dl-cv-dark" href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i> -->
      </div>
          
      </div>
@@ -83,7 +101,7 @@
           </div>
      </div>
       
-<script src="js/dark-light.js"></script>
-<script src="js/headerbg.js"></script>
+     <script src="js/dark-light.js"></script>
+     <script src="js/headerbg.js"></script>
 </body>
 </html>

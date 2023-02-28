@@ -2,60 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 /* Using barlow font from google */
-body {
+.body {
+  margin: auto;
   font-family: 'Barlow', sans-serif;
+  background-image: linear-gradient(to right, #505050 75%, #b3b6b8 150%);
+  color:#f3f3f3;
+  transition: 0.5s;
 }
 
-
-.header-container {
-  height: 600px;
-  overflow: hidden;
-  background-position: center;
-  background-size:cover;
-  background-attachment: fixed;
-  color:#fff;
-  background-image: linear-gradient(120deg, rgba(86, 114, 158, 0.6) 100%, rgba(106, 207, 253, 0.6) 100%), url(../Imagenes/Joseph-Mendez.jpg);
-}
-.bg {
-  width: 50px;
-  height:50px;
-  background-color:rgba(175, 175, 175, 0.596);
-  filter: blur(4px);
-  border-radius: 50%;
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  z-index:3;
-  transition: .01s;
-}
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-}
-/* configuration from titles of header */
-.h-items {
-  animation-name: h-items;
-  animation-duration: 3s;
-  animation-iteration-count: 2;
-  font-size:45px;
-  text-shadow: 2px 2px 15px #000;
-  text-align: center;
-  z-index: 5;
-}
-/* small animation from titles */
-@keyframes h-items {
-  0%   {text-shadow: 2px 2px 15px #f1f1f1; color:black;}
-  
-  100% { text-shadow: 2px 2px 15px #000; color:white;}
-}
-/* nav bar, using display flex, position sticky to see it on every part of the page */
 .navbar {
   z-index: 500;
   display: flex;
@@ -72,6 +30,111 @@ body {
   text-align: center;
 }
 
+.dark-light {
+  display: flex;
+  z-index: 1000;
+  height:30px;
+  width:30px;
+  margin:10px;
+  position: fixed;
+  right:0;
+  border-radius: 50%;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  transition:.2s;
+}
+
+.dark-light:hover {
+  box-shadow: 0 0 8px #eee;
+  cursor:pointer;
+}
+
+.nv-dark {
+  background: rgba(51, 51, 51, 0.9);
+}
+
+.nav-a-dark {
+  color:#fff;
+}
+.nav-a-dark:hover {
+  text-decoration: underline;
+}
+
+.header-container {
+  height: 500px;
+  overflow: hidden;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+  background-color: rgba(51, 51, 51, 0.2);
+}
+.bg {
+  width: 50px;
+  height:50px;
+  background-color:rgba(175, 175, 175, 0.596);
+  filter: blur(4px);
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  z-index:3;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 85%;
+  height: 400px;
+  margin: 3rem;
+}
+/* All related to profile part */
+.prof-img-div {
+  width: 50%; 
+}
+
+.prof-img {
+  background-color:transparent;
+  -webkit-filter: grayscale(100%);
+  filter:grayscale(100%);
+  width: 90%;
+  border-radius:10px; 
+  object-fit: cover; 
+}
+
+.prof-name {
+  width: 50%;
+  margin: 15px;
+  text-align: justify;
+}
+
+.prof {
+  background-color:transparent;
+  height: auto;
+  width: 65%;
+  padding:20px;
+}
+/* configuration from titles of header */
+.h-items {
+  animation-name: h-items;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+  font-size:45px;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  z-index: 5;
+}
+/* small animation from titles */
+@keyframes h-items {
+  0%   {text-shadow: 2px 2px 5px #f1f1f1; color:black;}
+  
+  100% { text-shadow: 2px 2px 5px #000; color:white;}
+}
+/* nav bar, using display flex, position sticky to see it on every part of the page */
+
+
 /*  */
 .container {
   width: 100%;
@@ -80,27 +143,9 @@ body {
   flex-wrap:wrap;
   justify-content: center;
   text-align: justify;
-}
-/* All related to profile part */
-.prof-img-div {
-  width: 35%; 
+  /* background-color:#61686d; */
 }
 
-.prof-img {
-  background-color:transparent;
-  -webkit-filter: grayscale(100%);
-  filter:grayscale(100%);
-  height: 100%;
-  width: 100%;
-  border-radius:10px; 
-  object-fit: cover; 
-}
-.prof {
-  background-color:transparent;
-  height: auto;
-  width: 65%;
-  padding:20px;
-}
 
 /* img {
   width: 100%;
@@ -110,17 +155,16 @@ body {
 .bg-bar {
   margin: 10px;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   height:30px;
   text-align: center;
   width: 80%;
-  box-shadow: 0 0 3px #333;
+  box-shadow: 0 0 5px #333;
 }
 .bar {
   border-radius: 5px;
-  height: 28px;
+  height: 30px;
   width: 70%;
-  color:#000;
   font-size: 20px;
 }
 /* configuraciones individuales de las barras */
@@ -154,17 +198,62 @@ body {
   width: 20%;
   background-color: #3873A1;
 }
+.h2-proyectos {
+  padding: 15px;
+  margin: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.proyectos {
+  width: 100%;
+  height: 500px;
+  margin:15px;
+  display: flex;
+  justify-content: center;
+}
+
+.amara-cedrus {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 90%;
+  margin: 5px;
+}
+
+.amara-cedrus>a {
+  text-align: center;
+  background: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color:#03989E;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.amara-cedrus>a:hover {
+  text-decoration: underline;
+  box-shadow: 1px 1px 2px #333;
+ }
+
+.amara-cedrus>iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border:none;
+}
+
 
 .cv-download {
   display:flex;
   align-items: center;
   justify-content: center;
   height: 65px;
-  background: #222;
+  background: rgba(34, 34, 34, 0.1);
 }
 .cv-download a {
   padding:10px;
-  color:#ccc;
+  color:#999;
   font-size: 25px;
   text-decoration: none;
   box-shadow: inset 0 0 0 0 #ffffff;
@@ -177,36 +266,40 @@ body {
 .footer {
   padding:20px;
   text-align: center;
-  background: #ddd;
+  /* background: #ddd; */
   display:flex;
   justify-content: space-evenly;
   align-items:center;
 }
 
 #linkedin {
-  margin: 0;
-  font-size: 35px;
-  border:1px solid white;
-  padding: 12px 14px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  border:1px solid ddd;
+  height: 40px;
+  width:40px;
   border-radius: 50%;
   transition: 0.3s;
+  background-color:#fff
 } 
 #linkedin a{
-  color: #000;
+  color: #0961B8;
   text-decoration: none;
 }
 
 #linkedin:hover {
-  background-color:rgb(255, 255, 255);
+  background-color:rgba(240, 240, 240, 0.9);
 }
 
 #linkedin a:hover {
-  color:#0274B3;
   cursor: pointer;
 }
 
 #email {
-  color:#000;
+  color:#fff;
+  text-shadow: 1px 1px 2px #000;
   text-decoration: none;
 }
 #email:hover {
