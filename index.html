@@ -8,26 +8,37 @@
      <link rel="stylesheet" href="css/style.css"/>
      <!-- css for dark and light toggle button -->
      <link rel="stylesheet" href="css/darklight.css"/>
+     <!-- Fonts and icons -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,700;1,100&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <title>Portfolio Joseph Méndez</title>
 </head>
-<body class="body">
-  <!-- Change betwen dark and light theme-->
-  <button class="dark-light dark">
-     <i class='dark-light-icon bx bx-sun'></i>
-  </button> 
+<body class="body" >
+ <div class="cont-navbar">
+     <div class="navbar">
+          <div class="nav-cont-home">
+               <button class="dark-light dark">
+                    <i class='dark-light-icon bx bx-sun'></i>
+               </button>
+               <a class="nav-a-dark" href="#inicio">Home</a>
+          </div>     
+          <a class="nav-a-dark" href="#proyectos">Proyects</a>
+          <a class="nav-a-dark" href="#contacto">Contact</a>   
+          <!-- <div class="show-nav-btn-close">
+            <button class="button-nav-close"><i class='bx bx-chevron-up'></i></button> 
+          </div> -->
+        </div>
+        <div class="show-nav-btn">
+          <button class="button-nav"><i class='icon-nav bx bx-chevron-down '></i></button> 
+        </div>
+ </div>
+ 
   
-  <div class="navbar nv-dark">
-     <a class="nav-a-dark" href="#inicio">Home</a>
-     <a class="nav-a-dark" href="#proyectos">Proyects</a>
-     <a class="nav-a-dark" href="#contacto">Contact</a>   
-   </div>
   
-   <div class="header-container contenedor" id="inicio">
-     <div class="bg"></div>
+   <div class="header-container" id="inicio">
+     <!-- <div class="bg"></div> -->
      <div class="header">
           <div class="prof-img-div">
                <img class="prof-img" src="Imagenes/JosephPerfilSinFondo.png" alt="Joseph Mendez Ayard">
@@ -37,17 +48,14 @@
                <p> Graduated a Bachelor's degree in <b>Computer Systems Engineering</b>, this year, 2022, in the Technological University of Panama or Universidad Tecnológica de Panamá (UTP) in Spanish.<br>
                     This is my passion so i am working hard to become an excelent Front End developer and maybe one day a FullStack developer.
           </div>
-          
       <!-- <h2 id="profession" class="h-items" split-by="letter" letter-animation="hover">Front End Web Developer</h2> -->
     </div>       
   </div>
 
-
-     <div class="container container-dark">
-         
-    
-           <div class="prof .prof-light">
-               <h2>Skils</h2>
+  <h2 class="tittle">Skils</h2>
+     
+  <div class="container">
+           <div class="skills"> 
                <h3>HTML</h3>
                <div class="bg-bar bg-html">
                  <div class="bar bar-html">70% </div>
@@ -68,16 +76,15 @@
                 <div class="bg-bar bg-python">
                       <div class="bar bar-python">30% </div>
                 </div>
-        
            </div>
      </div>
 
-     <h2 class="h2-proyectos">Proyectos</h2>
+     <h2 class="tittle">Proyects</h2>
      
      <div class="proyectos" id="proyectos">
           <div class="amara-cedrus">
                <a href="https://amaracedrus.netlify.app/">Amara Cedrus</a>
-               <iframe src="https://amaracedrus.netlify.app/" title="Amara Cedrus"></iframe>
+               <!-- <iframe src="https://amaracedrus.netlify.app/" title="Amara Cedrus"></iframe> -->
           </div>
           <div class="proyecto2">
                
@@ -89,10 +96,10 @@
      </div>
          
      </div>
-     <div class="footer" id="contacto">
-          <div>
-               <h2>Contact:</h2>  
-          </div>
+
+     <h2 class="tittle">Contact:</h2>  
+      <div class="footer" id="contacto">
+          
           <div id="linkedin">
                <a href="https://www.linkedin.com/in/joseph-m%C3%A9ndez/" title="Click to go to linkedin profile." target="_blank" tittle="Joseph Mendez Linkedin"><i class='bx bxl-linkedin' > </i></a>
           </div>
@@ -101,7 +108,6 @@
           </div>
      </div>
       
-     <script src="js/dark-light.js"></script>
-     <script src="js/headerbg.js"></script>
+     <script src="js/script.js"></script>
 </body>
 </html>
