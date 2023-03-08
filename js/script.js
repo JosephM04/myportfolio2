@@ -1,11 +1,21 @@
 "use strict";
 
-const darkLight = document.querySelector(".dark");
+// Animación de particulas en la pantalla de carga
+const particles = document.querySelector(".particles");
+
+window.addEventListener("load", () => {
+        particles.style.display ="none";
+})
+
+// configuración para cambiar entre modo oscuro y modo claro
+const darkLight = document.querySelector(".dark"); 
 const dlIcon = document.querySelector(".dark-light-icon");
 const body = document.querySelector(".body");
 const email = document.getElementById("email");
 
+// si dl es true está activado el modo oscuro  y cambiará a modo claro, de lo contrario está en modo claro y cambiará a modo oscuro
 let dl = true;
+// evento al dar click en el boton
 darkLight.addEventListener("click", () => {
     if(dl) {
         darkLight.classList.replace("dark", "light");
@@ -29,11 +39,9 @@ darkLight.addEventListener("click", () => {
 
 // menu de navegación
 
-const navBar = document.querySelector(".navbar");
+const navBar = document.querySelector(".cont-navbar");
 const showNavBtn = document.querySelector(".button-nav");
-const icon = document.querySelector(".icon-nav");
-
-let contIcon = true;
+const icon = document.querySelector(".icon-nav"); 
 
 showNavBtn.addEventListener('click', () =>{
     navBar.classList.toggle("show-nav");
@@ -47,8 +55,3 @@ window.addEventListener('click', e=>{
         navBar.classList.toggle("show-nav");
     }
 });
-
-
-
-
-

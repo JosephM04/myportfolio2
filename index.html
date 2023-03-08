@@ -1,113 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- main css -->
-     <link rel="stylesheet" href="css/style.css"/>
-     <!-- css for dark and light toggle button -->
-     <link rel="stylesheet" href="css/darklight.css"/>
-     <!-- Fonts and icons -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,700;1,100&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-     <title>Portfolio Joseph Méndez</title>
-</head>
-<body class="body" >
- <div class="cont-navbar">
-     <div class="navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- particles animation on load -->
+    <link rel="stylesheet" href="css/particles.css" />
+    <!-- Fonts and icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,700;1,100&family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio Joseph Méndez</title>
+  </head>
+  <body class="body">
+    <div class="contenedor">
+      <div class="bg"></div>
+
+      <div class="particles">
+        <div class="glowing">
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
+        </div>
+        <div class="glowing">
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
+        </div>
+        <div class="glowing">
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
+        </div>
+        <div class="glowing">
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
+        </div>
+      </div>
+
+      <div class="cont-navbar">
+        <div class="navbar">
           <div class="nav-cont-home">
-               <button class="dark-light dark">
-                    <i class='dark-light-icon bx bx-sun'></i>
-               </button>
-               <a class="nav-a-dark" href="#inicio">Home</a>
-          </div>     
+            <button class="dark-light dark">
+              <i class="dark-light-icon bx bx-sun"></i>
+            </button>
+            <a class="nav-a-dark" href="#inicio">Home</a>
+          </div>
           <a class="nav-a-dark" href="#proyectos">Proyects</a>
-          <a class="nav-a-dark" href="#contacto">Contact</a>   
+          <a class="nav-a-dark" href="#contacto">Contact</a>
           <!-- <div class="show-nav-btn-close">
             <button class="button-nav-close"><i class='bx bx-chevron-up'></i></button> 
           </div> -->
         </div>
         <div class="show-nav-btn">
-          <button class="button-nav"><i class='icon-nav bx bx-chevron-down '></i></button> 
+          <button class="button-nav">
+            <i class="icon-nav bx bx-chevron-down"></i>
+          </button>
         </div>
- </div>
- 
-  
-  
-   <div class="header-container" id="inicio">
-     <!-- <div class="bg"></div> -->
-     <div class="header">
+      </div>
+
+      <div class="header-container" id="inicio">
+        <!-- <div class="bg"></div> -->
+        <div class="header">
           <div class="prof-img-div">
-               <img class="prof-img" src="Imagenes/JosephPerfilSinFondo.png" alt="Joseph Mendez Ayard">
+            <img
+              class="prof-img"
+              src="Imagenes/JosephPerfilSinFondo.png"
+              alt="Joseph Mendez Ayard"
+            />
           </div>
           <div class="prof-name">
-               <h1 id="name" class="h-items" >Joseph Méndez</h1>
-               <p> Graduated a Bachelor's degree in <b>Computer Systems Engineering</b>, this year, 2022, in the Technological University of Panama or Universidad Tecnológica de Panamá (UTP) in Spanish.<br>
-                    This is my passion so i am working hard to become an excelent Front End developer and maybe one day a FullStack developer.
-          </div>
-      <!-- <h2 id="profession" class="h-items" split-by="letter" letter-animation="hover">Front End Web Developer</h2> -->
-    </div>       
-  </div>
+            <h1 id="name" class="h-items">Hi! i'm Joseph Méndez</h1>
 
-  <h2 class="tittle">Skils</h2>
-     
-  <div class="container">
-           <div class="skills"> 
-               <h3>HTML</h3>
-               <div class="bg-bar bg-html">
-                 <div class="bar bar-html">70% </div>
-               </div>
-                <h3>CSS</h3>
-                <div class="bg-bar bg-css">
-                      <div class="bar bar-css">75% </div>
-                </div>
-                <h3>JavaScript</h3>
-                <div class="bg-bar bg-js">
-                      <div class="bar bar-js">55% </div>
-                </div>
-                <h3>Git</h3>
-                <div class="bg-bar bg-git">
-                      <div class="bar bar-git">20% </div>
-                </div>
-                <h3>Python</h3>
-                <div class="bg-bar bg-python">
-                      <div class="bar bar-python">30% </div>
-                </div>
-           </div>
-     </div>
+            <div>
+              <h2 class="h-items ">
+                I have a Bachelor's degree in
+                <b
+                  >Computer Systems Engineering and i am a front end
+                  developer</b
+                >
+              </h2>
+            </div>
+            <!-- <p>
+             this year, 2022, in the
+              Technological University of Panama or Universidad Tecnológica de
+              Panamá (UTP) in Spanish.<br />
+              This is my passion so i am working hard to become an excelent
+              Front End developer and maybe one day a FullStack developer.
+            </p> -->
+            <!-- <img src="Imagenes/Web development _Monochromatic.svg" alt="Web development by https://www.manypixels.co"> -->
+          </div>
 
-     <h2 class="tittle">Proyects</h2>
-     
-     <div class="proyectos" id="proyectos">
-          <div class="amara-cedrus">
-               <a href="https://amaracedrus.netlify.app/">Amara Cedrus</a>
-               <!-- <iframe src="https://amaracedrus.netlify.app/" title="Amara Cedrus"></iframe> -->
-          </div>
-          <div class="proyecto2">
-               
-          </div>
-     </div>
+          <!-- <h2 id="profession" class="h-items" split-by="letter" letter-animation="hover">Front End Web Developer</h2> -->
+        </div>
+      </div>
+    </div>
 
-     <div class="cv-download .cv-download-dark">
-          <!-- <i><a class="dl-cv-dark" href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i> -->
-     </div>
-         
-     </div>
+    <h2 class="tittle">Skills</h2>
 
-     <h2 class="tittle">Contact:</h2>  
-      <div class="footer" id="contacto">
-          
-          <div id="linkedin">
-               <a href="https://www.linkedin.com/in/joseph-m%C3%A9ndez/" title="Click to go to linkedin profile." target="_blank" tittle="Joseph Mendez Linkedin"><i class='bx bxl-linkedin' > </i></a>
-          </div>
-          <div>
-               <p id="pemail">Email: <a id="email" href = "mailto: j.mendez0434@gmail.com" title="Click to send e-mail">j.mendez0434@gmail.com</a></p>
-          </div>
-     </div>
-      
-     <script src="js/script.js"></script>
-</body>
+    <div class="container">
+      <div class="skills">
+        <h3>HTML</h3>
+        <div class="bg-bar bg-html">
+          <div class="bar bar-html">70%</div>
+        </div>
+        <h3>CSS</h3>
+        <div class="bg-bar bg-css">
+          <div class="bar bar-css">75%</div>
+        </div>
+        <h3>JavaScript</h3>
+        <div class="bg-bar bg-js">
+          <div class="bar bar-js">55%</div>
+        </div>
+        <h3>Git</h3>
+        <div class="bg-bar bg-git">
+          <div class="bar bar-git">20%</div>
+        </div>
+        <h3>Python</h3>
+        <div class="bg-bar bg-python">
+          <div class="bar bar-python">30%</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="tittle">Proyects</h2>
+
+    <div class="proyectos" id="proyectos">
+      <div class="amara-cedrus">
+        <a href="https://amaracedrus.netlify.app/">Amara Cedrus</a>
+        <!-- <iframe src="https://amaracedrus.netlify.app/" title="Amara Cedrus"></iframe> -->
+      </div>
+      <div class="proyecto2"></div>
+    </div>
+
+    <div class="cv-download .cv-download-dark">
+      <!-- <i><a class="dl-cv-dark" href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i> -->
+    </div>
+
+    <h2 class="tittle">Contact:</h2>
+    <div class="footer" id="contacto">
+      <div id="linkedin">
+        <a
+          href="https://www.linkedin.com/in/joseph-m%C3%A9ndez/"
+          title="Click to go to linkedin profile."
+          target="_blank"
+          tittle="Joseph Mendez Linkedin"
+          ><i class="bx bxl-linkedin"> </i
+        ></a>
+      </div>
+      <div>
+        <p id="pemail">
+          Email:
+          <a
+            id="email"
+            href="mailto: j.mendez0434@gmail.com"
+            title="Click to send e-mail"
+            >j.mendez0434@gmail.com</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="js/headerbg.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
