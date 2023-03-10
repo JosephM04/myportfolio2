@@ -301,35 +301,33 @@ h2.h-items {
 }
 
 .proyectos {
-  width: 100%;
-  height: auto;
+  margin: auto;
+  width: 90%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap:15px;
 }
 
-.amara-cedrus {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 95%;
-  height: auto;
-  margin: 5px;
-}
-
-.amara-cedrus>a {
-  text-align: center;
+.proyectos>div {
+  min-width: 200px;
+  min-height: 200px;
   background: #fff;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #03989E;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
 }
 
-.amara-cedrus>a:hover {
+.proyectos>div>a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #03989E;
+}
+
+.proyectos>div>a:hover {
   text-decoration: underline;
-  box-shadow: 1px 1px 2px #333;
 }
 
 .cv-download {
@@ -487,9 +485,5 @@ h2.h-items {
     margin: auto;
   }
 
-  .proyectos {
-    margin: auto;
-    width: 80%;
-  }
 }
 /* @media screen and (max-width:500px) {} */
