@@ -323,7 +323,8 @@ h2.h-items {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-  color: #03989E;
+  color: #222;
+  font-weight: 1000;
 }
 
 .proyectos>div>a:hover {
