@@ -251,7 +251,7 @@ h2.h-items {
 
 /* configuraciones individuales de las barras */
 /* color y porcentaje para la barra de html */
-.bg-html {
+/* .bg-html {
   background-color: #E96228;
 }
 
@@ -261,44 +261,44 @@ h2.h-items {
 }
 
 /* color y porcentaje para la barra de css */
-.bg-css {
+/* .bg-css {
   background-color: #3194F7;
-}
+} */ 
 
-.bar-css {
+/* .bar-css {
   width: 75%;
   background-color: #2173F7;
-}
+} */
 
 /* color y porcentaje para la barra de js */
-.bg-js {
+/* .bg-js {
   background-color: #F7E018;
 }
 
 .bar-js {
   width: 55%;
   background-color: #d4bf00;
-}
+} */
 
 /* color y porcentaje para la barra de git */
-.bg-git {
+/* .bg-git {
   background-color: #F7F7F7;
 }
 
 .bar-git {
   width: 20%;
   background-color: #E84D31;
-}
+} */
 
 /* color y porcentaje para la barra de git */
-.bg-python {
+/* .bg-python {
   background-color: #F7D24A;
 }
 
 .bar-python {
   width: 20%;
   background-color: #3873A1;
-}
+} */
 
 .proyectos {
   margin: auto;

@@ -1,0 +1,68 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1550px);
+  }
+}
+.slider {
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+}
+.slider::before, .slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 100%;
+}
+.slider .slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  margin: 0 15px;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=sasstyle.css.map */
+.slide {
+  position: relative;
+}
+.slide>img {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius:50%;
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+}
+
+.github {
+  background-color: rgba(200, 200, 200, 0.9 )
+}
+
+.img-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #111;
+    text-shadow: 3px 3px 3px #fff;
+    font-size: 40px;
+}
