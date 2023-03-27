@@ -174,12 +174,12 @@ body {
 }
 
 .prof-img {
-  background-color: transparent;
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  filter: grayscale(100%)  drop-shadow(0 -5px 3px #666);
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+
 }
 
 .prof-name {
@@ -200,6 +200,7 @@ body {
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-shadow: 0 0 1px #555;
 }
 h2.h-items {
   margin-top:5px;
@@ -248,57 +249,6 @@ h2.h-items {
   width: 70%;
   font-size: 13px;
 }
-
-/* configuraciones individuales de las barras */
-/* color y porcentaje para la barra de html */
-/* .bg-html {
-  background-color: #E96228;
-}
-
-.bar-html {
-  width: 70%;
-  background-color: #DD4B25;
-}
-
-/* color y porcentaje para la barra de css */
-/* .bg-css {
-  background-color: #3194F7;
-} */ 
-
-/* .bar-css {
-  width: 75%;
-  background-color: #2173F7;
-} */
-
-/* color y porcentaje para la barra de js */
-/* .bg-js {
-  background-color: #F7E018;
-}
-
-.bar-js {
-  width: 55%;
-  background-color: #d4bf00;
-} */
-
-/* color y porcentaje para la barra de git */
-/* .bg-git {
-  background-color: #F7F7F7;
-}
-
-.bar-git {
-  width: 20%;
-  background-color: #E84D31;
-} */
-
-/* color y porcentaje para la barra de git */
-/* .bg-python {
-  background-color: #F7D24A;
-}
-
-.bar-python {
-  width: 20%;
-  background-color: #3873A1;
-} */
 
 .proyectos {
   margin: auto;
