@@ -7,25 +7,26 @@
 .bg {
   display: block;
   width: 50px;
-  height:50px;
-  background-color:rgba(255, 238, 0, 0.5);
+  height: 50px;
+  background-color: rgba(255, 238, 0, 0.5);
   box-shadow: 0 0 50px rgb(255, 217, 0);
   filter: blur(50px);
   border-radius: 50%;
   position: absolute;
-  top:-15px;
-  left:-15px;
-  transform:translate(-50%, -50%);
-  z-index:3;
-  transition:0.08s;
+  top: -15px;
+  left: -15px;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: 0.08s;
 }
+
 /* Using barlow font from google */
 body {
   width: 100%;
   font-family: 'Barlow', sans-serif;
-  background-image: linear-gradient(to right, #505050 75%, #b3b6b8 150%);
+  background-color: #1a253c;
   color: #f3f3f3;
-  transition:0.3s ;
+  transition: 0.3s;
 }
 
 .cont-navbar {
@@ -34,7 +35,7 @@ body {
   z-index: 600;
   transition: 0.3s;
   background: rgba(50, 50, 50, 0.8);
-  transform: translateY(-50px);
+  transform: translateY(-2.5em);
 }
 
 .navbar {
@@ -44,6 +45,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -54,10 +56,10 @@ body {
 }
 
 .navbar a {
-  font-size: 15px;
+  font-size: calc(0.7em + 1vw);
   border-radius: 5px;
   text-decoration: none;
-  padding: 14px 16px;
+  padding: 12px 16px;
   text-align: center;
 }
 
@@ -84,7 +86,7 @@ body {
   align-items: center;
   border: none;
   background: none;
-  font-size: 35px;
+  font-size: 27px;
   text-shadow: 1px 1px 5px #fff;
   z-index: 551;
 }
@@ -96,30 +98,30 @@ body {
 /* boton para cambiar entre modo oscuro y modo claro */
 .dark-light {
   display: flex;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  margin: 5px;
+  right: 0; */
+  width: 26px;
+  height: 26px;
+  /* margin: 5px; */
   border-radius: 50%;
   font-size: 18px;
   align-items: center;
   justify-content: center;
-  transition: .2s;
+  transition: .1s;
 }
 
 .dark {
-  background:#eee;
+  background: #eee;
   border: 1px solid #eee;
   color: #111;
   transition: 0.5s;
 }
 
 .light {
-  background-color:#111; 
+  background-color: #111;
   border: 1px solid #111;
-  color:#eee;
+  color: #eee;
   box-shadow: 0 0 2px #ddd;
   transition: 0.5s;
 }
@@ -139,6 +141,7 @@ body {
 
 .header-container {
   height: auto;
+  min-height:400px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -162,50 +165,53 @@ body {
   flex-direction: column;
   background-color: transparent;
   height: auto;
-  width: 100%;
+  width: 95%;
   padding: 20px;
 }
 
 .prof-img-div {
+  margin-top: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width:calc(12em + 1vw) ;
+  height:calc(12em + 1vw);
+  border-radius: 10%;
 }
 
 .prof-img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%)  drop-shadow(0 -5px 3px #666);
+  filter: drop-shadow(0 -1px 3px #666);
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
   object-fit: cover;
-
+  object-position: top;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background-color: #f3f3f3;
 }
 
 .prof-name {
-  width: 100%;
+  width: 80%;
   margin: 10px 50px;
   display: flex;
-  text-align: justify;
   flex-direction: column;
   justify-content: center;
 }
 
 /* configuration from titles of header */
 .h-items {
-  font-size: 25px;
+  font-size:calc(1em + 1vw);;
   text-shadow: 1px 1px 1px #000;
-  text-align: justify;
   z-index: 5;
   margin-bottom: 15px;
-  text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 0 1px #555;
 }
+
 h2.h-items {
-  margin-top:5px;
-  font-size: 20px;
-} 
+  margin-top: 5px;
+  font-size: calc(0.8em + 1vw);;
+}
 
 /*  */
 .container {
@@ -227,10 +233,10 @@ h2.h-items {
 }
 
 .tittle {
-  text-align: center;
-  padding: 15px;
+  padding: 10px;
   margin: 15px;
-  border-bottom: 1px solid #ddd;
+  font-size: calc(0.7em + 1vw);;
+  text-align: center;
 }
 
 /* Barra de porcentaje de mis habilidades, configuración general para todas las barras*/
@@ -251,28 +257,29 @@ h2.h-items {
 }
 
 .proyectos {
-  margin: auto;
+  margin: 3% auto;
   width: 90%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap:15px;
+  gap: 15px;
 }
 
 .proyectos>div {
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 150px;
+  min-height: 150px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  box-shadow: 0 0 2px #222;
 }
 
 .proyectos>div>a {
   text-align: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   color: #222;
   font-weight: 1000;
 }
@@ -356,6 +363,11 @@ h2.h-items {
 
 /* responsive */
 @media screen and (min-width:1400px) {
+  .header-container {
+    height: 75vh;
+    min-height:600px;
+    align-items: center;
+  }
   .prof-name {
     margin: 65px;
   }
@@ -370,65 +382,59 @@ h2.h-items {
     border-radius: 5px;
     height: 50px;
     width: 70%;
-    font-size: 30px;
   }
 
-  .skills,
-  h2 {
-    font-size: 30px;
-  }
 
-  .tittle {
-    font-size: 35px;
-  }
 }
 
 @media screen and (min-width:1024px) {
   .header {
     flex-direction: row;
   }
+
   .h-items {
     font-size: 35px;
   }
+
   h2.h-items {
     font-size: 30px;
-  } 
-
-  #name {
-    font-size: 55px;
   }
 
-  .amara-cedrus a {
-    font-size: 25px;
+  .bg-bar,
+  .bar {
+    height: 30px;
   }
 
   .navbar a {
-    font-size: 22px;
-  }
+    font-size: calc(0.1em + 1vw);;
 
-  .button-nav {
-    font-size: 60px;
-  }
-  .cont-navbar {
-    transform: translateY(-55px);
-  }
-  .show-nav {
-    transform: translateY(0);
-  }
 
-  .bg-bar, .bar {
-    height: 30px;
-  }
-   
 }
 
 @media screen and (min-width:768px) {
+  .header-container {
+    height:75vh;
+  }
+  .header {
+    width: 60%;
+    height: 100%;
+    flex-direction: row;
+  }
   .prof-img-div {
-    width: 70%;
+    margin-top: 20px;
+
   }
 
   .prof-name {
-    width: 80%;
+    width: 50%;
+    font-size:14px;
+  }
+  #name {
+    font-size: 19px;
+  }
+
+  .h-items {
+    font-size: 16px;
   }
 
   .container {
@@ -436,5 +442,19 @@ h2.h-items {
     margin: auto;
   }
 
+  .cont-navbar {
+
+    transform: translateY(0);
+  }
+
+  .show-nav {
+    transform: translateY(0);
+  }
+
+  .show-nav-btn {
+    display: none;
+  }
+
 }
+
 /* @media screen and (max-width:500px) {} */
