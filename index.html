@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/sasstyle.css" />
     <!-- particles animation on load -->
     <link rel="stylesheet" href="css/particles.css" />
+    <!-- AOS library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Fonts and icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -73,12 +75,18 @@
         <div class="header">
           <div class="prof-img-div">
             <img
+              data-aos="zoom-in-right"
+              data-aos-duration="2000"
               class="prof-img"
               src="Imagenes/JosephPerfilSinFondo.png"
               alt="Joseph Mendez Ayard"
             />
           </div>
-          <div class="prof-name">
+          <div
+            class="prof-name"
+            data-aos="zoom-in-left"
+            data-aos-duration="2000"
+          >
             <h1 id="name" class="h-items">Hi! i'm Joseph Méndez</h1>
 
             <div>
@@ -102,8 +110,8 @@
       </div>
     </div>
 
-    <h2 class="tittle">Knowledge</h2>
-    <div class="tools-cont">
+    <h2 class="tittle" data-aos="zoom-in-up">Knowledge</h2>
+    <div class="tools-cont" data-aos="zoom-in-up">
       <div class="tools">
         <!-- <h3 class="tittle-tools">HTML</h3> -->
         <img
@@ -115,7 +123,7 @@
       <div class="tools">
         <!-- <h3 class="tittle-tools">CSS</h3> -->
         <img
-          src="https://virtualizate.unives.mx/wp-content/uploads/2020/07/11css3.png"
+          src="https://www.labsrc.com/wp-content/uploads/2022/03/css3.png"
           alt="css icon"
           class="css"
         />
@@ -161,9 +169,9 @@
       </div>
     </div>
 
-    <h2 class="tittle">Proyects</h2>
+    <h2 class="tittle" data-aos="zoom-in-up">Proyects</h2>
 
-    <div class="proyectos" id="proyectos">
+    <div data-aos="zoom-in-up" class="proyectos" id="proyectos">
       <div>
         <a href="https://amaracedrus.netlify.app/">Amara Cedrus</a>
         <!-- <iframe src="https://amaracedrus.netlify.app/" title="Amara Cedrus"></iframe> -->
@@ -178,30 +186,38 @@
       <!-- <i><a class="dl-cv-dark" href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i> -->
     </div>
 
-    <h2 class="tittle">Contact:</h2>
-    <div class="footer" id="contacto">
-      <div id="linkedin">
-        <a
-          href="https://www.linkedin.com/in/joseph-m%C3%A9ndez/"
-          title="Click to go to linkedin profile."
-          target="_blank"
-          tittle="Joseph Mendez Linkedin"
-          ><i class="bx bxl-linkedin"> </i
-        ></a>
-      </div>
-      <div>
-        <p id="pemail">
-          Email:
+    <div class="footer-cont">
+      <h2 class="tittle" >Contact:</h2>
+      <div class="footer" id="contacto">
+        <div id="linkedin">
           <a
-            id="email"
-            href="mailto: j.mendez0434@gmail.com"
-            title="Click to send e-mail"
-            >j.mendez0434@gmail.com</a
-          >
-        </p>
+            href="https://www.linkedin.com/in/joseph-m%C3%A9ndez/"
+            title="Click to go to linkedin profile."
+            target="_blank"
+            tittle="Joseph Mendez Linkedin"
+            ><i class="bx bxl-linkedin"> </i
+          ></a>
+        </div>
+        <div>
+          <p id="pemail">
+            Email:
+            <a
+              id="email"
+              href="mailto: j.mendez0434@gmail.com"
+              title="Click to send e-mail"
+              >j.mendez0434@gmail.com</a
+            >
+          </p>
+        </div>
       </div>
     </div>
+
     <script src="js/headerbg.js"></script>
     <script src="js/script.js"></script>
+    <!-- AOS library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
