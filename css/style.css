@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 
+/* containter of header */
 .contenedor {
   background-color: rgba(0, 0, 0, 0.007);
   box-shadow: 0 0 3px #aaa;
 }
 
+/* background onmousemove on header container */
 .bg {
   display: block;
   width: 50px;
@@ -26,6 +28,7 @@
 }
 
 /* Using barlow font from google */
+/* General body */
 body {
   width: 100%;
   font-family: 'Barlow', sans-serif;
@@ -34,46 +37,54 @@ body {
   transition: 0.3s;
 }
 
+/* container for navbar */
 .cont-navbar {
   width: 100%;
   position: fixed;
   z-index: 600;
   transition: 0.3s;
-  background: rgba(50, 50, 50, 0.5);
+  /* background: rgba(50, 50, 50, 0.5); */
   transform: translateY(-2.5em);
 }
 
 .navbar {
-  background: rgba(50, 50, 50, 0.5);
+  /* background: rgba(50, 50, 50, 0.5); */
   width: 100%;
   z-index: 500;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  background-color:rgba(34, 34, 34, 0.2);
 }
 
+/* Class that would be added when the arrow button is clicked to show the nav bar in mobile */
 .show-nav {
   transform: translateY(0);
 }
 
-.navbar a {
+/* nav bar links */
+.nav-a-dark {
   font-size: calc(0.7em + 1vw);
   border-radius: 5px;
   text-decoration: none;
   padding: 12px 16px;
   text-align: center;
+  color:#fff;
+}
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-.nav-cont-home {
-  display: flex;
-  justify-content: center;
+.nav-a-light {
+  color:#111;
 }
 
-/* boton para mostrar y cerrar el menú de navegación */
+
+/* container of the button to show and hide the nava bar */
 .show-nav-btn {
   position: sticky;
   top: 0;
@@ -82,33 +93,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(50, 50, 50, 0.5);
+  background-color: transparent;
   z-index: 550;
 }
 
+/* button to show and hide nav bar */
 .button-nav {
   display: flex;
   align-items: center;
   border: none;
   background: none;
   font-size: 27px;
-  text-shadow: 1px 1px 5px #fff;
+  text-shadow: 0 0 5px #fff;
   z-index: 551;
 }
 
+/* icon inside the button (arrow) */
 .bx-chevron-up .bx-chevron-down {
   font-size: 35px;
 }
 
-/* boton para cambiar entre modo oscuro y modo claro */
+/*button to change from dark mode to light mode and hover conf*/
 .dark-light {
   display: flex;
-  /* position: absolute;
-  top: 0;
-  right: 0; */
   width: 26px;
   height: 26px;
-  /* margin: 5px; */
   border-radius: 50%;
   font-size: 18px;
   align-items: center;
@@ -116,6 +125,12 @@ body {
   transition: .1s;
 }
 
+.dark-light:hover {
+  box-shadow: 0 0 8px #eee;
+  cursor: pointer;
+}
+
+/* class that would be added to the button for dark mode */
 .dark {
   background: #eee;
   border: 1px solid #eee;
@@ -123,6 +138,7 @@ body {
   transition: 0.5s;
 }
 
+/* class that would be added to the button for light mode */
 .light {
   background-color: #111;
   border: 1px solid #111;
@@ -131,18 +147,14 @@ body {
   transition: 0.5s;
 }
 
-.dark-light:hover {
-  box-shadow: 0 0 8px #eee;
-  cursor: pointer;
-}
 
-.nav-a-dark {
+/* .nav-a-dark {
   color: #fff;
-}
+} */
 
-.nav-a-dark:hover {
+/* .nav-a-dark:hover {
   text-decoration: underline;
-}
+} */
 
 .header-container {
   height: auto;
@@ -150,6 +162,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .header {
@@ -205,18 +218,17 @@ body {
 /* configuration from titles of header */
 .h-items {
   font-size: calc(1em + 1vw);
-  ;
   text-shadow: 1px 1px 1px #000;
   z-index: 5;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   letter-spacing: 1px;
   text-shadow: 0 0 1px #555;
+  text-align: center;
 }
 
 h2.h-items {
   margin-top: 5px;
   font-size: calc(0.8em + 1vw);
-  ;
 }
 
 /*  */
@@ -242,7 +254,6 @@ h2.h-items {
   padding: 10px;
   margin: 15px;
   font-size: calc(0.7em + 1vw);
-  ;
   text-align: center;
 }
 
@@ -410,7 +421,7 @@ h2.h-items {
   .header-container {
     height: 100vh;
     min-height: 100vh;
-    width:40%
+    width: 40%
   }
 
   .h-items {
@@ -448,11 +459,12 @@ h2.h-items {
 
   .prof-name {
     width: 50%;
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
-  #name {
-    font-size: 19px;
+  .h-items {
+    text-align: left;
+    /* font-size: 19px; */
   }
 
   .h-items {
