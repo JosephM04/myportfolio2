@@ -4,11 +4,31 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-tittle-sscreen: 2.4rem;
+  --main-tittle-lscreen: 2.5rem;
+  --normal-text-sscreen: 1.2rem;
+  --normal-text-lscreen: 1.3rem;
+  --secundary-tittle-sscreen: 1.7rem;
+  --secundary-tittle-lscreen: 1.8rem;
+  --main-color: #1a253c;
+  --text-color: #f3f3f3;
+}
+
+/* General body */
+/* Using barlow font from google */
+body {
+  width: 100%;
+  font-family: 'Barlow', sans-serif;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
 /* containter of header */
 .contenedor {
   background-color: rgba(0, 0, 0, 0.007);
   box-shadow: 0 0 3px #aaa;
-  width: 100%;  
+  width: 100%;
 }
 
 /* background onmousemove on header container */
@@ -26,16 +46,6 @@
   transform: translate(-50%, -50%);
   z-index: 3;
   transition: 0.08s;
-}
-
-/* Using barlow font from google */
-/* General body */
-body {
-  width: 100%;
-  font-family: 'Barlow', sans-serif;
-  background-color: #1a253c;
-  color: #f3f3f3;
-  transition: 0.3s;
 }
 
 /* container for navbar */
@@ -57,7 +67,6 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: rgba(34, 34, 34, 0.2);
 }
 
 /* Class that would be added when the arrow button is clicked to show the nav bar in mobile */
@@ -67,12 +76,14 @@ body {
 
 /* nav bar links */
 .nav-a-dark {
-  font-size: calc(0.7em + 1vw);
   border-radius: 5px;
   text-decoration: none;
   padding: 12px 16px;
   text-align: center;
   color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.705);
+
 }
 
 .navbar a:hover {
@@ -80,6 +91,7 @@ body {
 }
 
 .nav-a-light {
+  text-shadow: 0 0 1px #555;
   color: #111;
 }
 
@@ -148,8 +160,6 @@ body {
 }
 
 .header-container {
-  height: 80vh;
-  min-height: 500px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -162,8 +172,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  height: auto;
+  width: 80%;
 }
 
 /* All related to profile part */
@@ -184,7 +193,7 @@ body {
   align-items: center;
   width: calc(12em + 1vw);
   height: calc(12em + 1vw);
-  min-width:calc(12em + 1vw);
+  min-width: calc(12em + 1vw);
   min-height: calc(12em + 1vw);
   border-radius: 50%;
   border: 3px solid #fff;
@@ -205,14 +214,17 @@ body {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
+/* Profile tittle and description container */
 .prof-name {
   width: 100%;
   margin: 10px 50px;
@@ -221,10 +233,16 @@ body {
   justify-content: center;
 }
 
+#name {
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: var(--main-tittle-sscreen);
+}
+
 /* configuration from titles of header */
 .h-items {
   width: 100%;
-  font-size: calc(0.5em + 1vw);
+  font-size: var(--normal-text-sscreen);
   text-shadow: 1px 1px 1px #000;
   z-index: 5;
   margin-bottom: 25px;
@@ -233,16 +251,6 @@ body {
   text-shadow: 0 0 1px #555;
 }
 
-#name {
-  text-align: center;
-  margin: 20px 0;
-  font-size: calc(1em + 1vw);
-}
-
-h2.h-items {
-  margin-top: 15px;
-  font-size: calc(0.8em + 1vw);
-}
 
 /*  */
 .container {
@@ -265,8 +273,9 @@ h2.h-items {
 
 .tittle {
   padding: 10px;
-  margin: 15px;
-  font-size: calc(0.7em + 1vw);
+  margin: 15px 0;
+  width: 100%;
+  font-size: var(--secundary-tittle-sscreen);
   text-align: center;
 }
 
@@ -277,7 +286,7 @@ h2.h-items {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
@@ -288,7 +297,7 @@ h2.h-items {
   width: calc(3em + 1vw);
   height: calc(3em + 1vw);
   min-width: calc(3em + 1vw);
-  min-height:calc(3em + 1vw) ;
+  min-height: calc(3em + 1vw);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,19 +312,13 @@ h2.h-items {
   object-fit: cover;
 }
 
-/* .tittle-tools {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 5px;
-  font-size:20px;
-  letter-spacing: 2px;
-} */
 .github {
   background-color: rgba(200, 200, 200, 0.9)
 }
 
 /* container for proyects */
 .proyectos {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -325,7 +328,7 @@ h2.h-items {
 .proyects-main {
   width: 100%;
   padding: 30px 0;
-  display:flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
@@ -335,7 +338,7 @@ h2.h-items {
 
 .proyects-link {
   display: grid;
-  place-content:center;
+  place-content: center;
   width: 100%;
   height: 100%;
 }
@@ -346,61 +349,54 @@ h2.h-items {
   line-height: 250px;
   border-radius: 20px;
   box-shadow: 0 0 5px #888;
-  color:#222;
+  color: #222;
   text-shadow: 0 0 4px #fff;
   text-decoration: none;
   text-align: center;
-  font-size: calc(1em + 1vw);
   font-weight: 1000;
+  font-size: var(--secundary-tittle-sscreen);
 }
-.proyects-link>a:hover { 
+
+.proyects-link>a:hover {
   text-decoration: underline;
 }
 
 .proyects-description {
   display: flex;
   justify-content: baseline;
-  width: 80vw;
+  width: 290px;
   height: 100%;
   margin: 40px 20px;
   text-align: center;
   padding-bottom: 10px;
-  border-bottom:1px solid #750000;
+  background-color: #2B395B;
+  border-radius: 15px;
 }
+
 .proyects-description p {
-  font-size: calc(0.5em + 1vw);
+  padding: 10px;
+  font-size: var(--normal-text-sscreen);
+
 }
 
 
 .amara-cedrus {
-  background-image:url("../Imagenes/AmaraCedrusMainPage.png");
+  background-image: url("../Imagenes/AmaraCedrusMainPage.png");
   background-size: cover;
 }
+
 .typing-game {
-  background-image:url("../Imagenes/typing-game.png");
+  background-image: url("../Imagenes/typing-game.png");
   background-size: cover;
   background-position: center;
 }
+
 .cv-download {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 65px;
   background: rgba(255, 255, 255, 0.1);
-}
-
-.cv-download a {
-  padding: 10px;
-  color: #999;
-  font-size: 25px;
-  text-decoration: none;
-  box-shadow: inset 0 0 0 0 #ffffff;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
-.cv-download a:hover {
-  color: #000;
-  box-shadow: inset 200px 0 0 0 #ffffff;
 }
 
 .footer-cont {
@@ -463,71 +459,42 @@ h2.h-items {
 /* responsive */
 /* @media screen and (max-width:500px) {} */
 @media screen and (min-width:768px) {
-  .header-container {
-    height: 98vh;
-    min-height: 600px;
-    width: 75%;
-    margin: auto;
-  }
 
   .header {
-    width: 100%;
-    height: 100%;
+    width: 80%;
   }
 
   .prof-name {
     width: 80%;
   }
 
-
-  .cont-navbar {
-
-    transform: translateY(0);
-  }
-
-  .show-nav {
-    transform: translateY(0);
-  }
-
-  .show-nav-btn {
-    display: none;
-  }
-
-  .prof-img-div {
-    margin-top: 0%;
-  }
-
- 
   .proyects-link {
     width: 60%;
-    margin:10px;
+    margin: 10px;
   }
 
   .proyects-link>a {
     width: 500px;
     height: 450px;
     line-height: 450px;
-    font-size: calc(0.2em + 1vw);
   }
+
   .proyects-description {
     text-align: left;
-    width: 50%;
-    margin:10px;
-  }
-  .proyects-description p {
-    height: 100%;
-    width: 100%;
+    width: 500px;
+    margin: 10px;
   }
 
 }
+
 @media screen and (min-width:1024px) {
   .header {
-    min-height: 700px;
+    width: 60%;
+    min-height: 600px;
   }
 
   .header-container {
-    height: 98vh;
-    min-height: 700px;
+    min-height: 600px;
   }
 
   .bg-bar,
@@ -535,29 +502,37 @@ h2.h-items {
     height: 30px;
   }
 
-  .navbar a {
-    font-size: calc(0.1em + 1vw);
-  }
-  
-  .proyects-description p {
-
-    font-size: calc(0.1em + 1vw);
-  }
-  .h-items {
-    font-size: calc(0.1em + 1vw);
-  }
 }
+
 @media screen and (min-width:1440px) {
   .prof-name {
     margin: 65px;
   }
+
   .header-container {
-    min-height: 900px;
+    min-height: 800px;
+  }
+
+  #name {
+    font-size: var(--main-tittle-lscreen)
+  }
+
+  .h-items {
+    font-size: var(--normal-text-lscreen);
+  }
+
+  .tittle {
+    font-size: var(--secundary-tittle-lscreen);
+  }
+
+  .proyects-description p {
+    font-size: var(--normal-text-lscreen);
   }
 }
 
+@media screen and (min-width:2560px) {
 
-
-
-
-
+  .header {
+    width: 50%;  
+  }
+}
