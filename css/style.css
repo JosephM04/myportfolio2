@@ -161,6 +161,7 @@ body {
 
 .header-container {
   width: 100%;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,11 +284,12 @@ body {
 /* main container */
 .tools-cont {
   display: flex;
-  align-items: center;
+  align-items: baselines;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
+  height: 200px;
 }
 
 /* containers from img */
@@ -374,7 +376,7 @@ body {
 }
 
 .proyects-description p {
-  padding: 10px;
+  padding: 20px;
   font-size: var(--normal-text-sscreen);
 
 }
