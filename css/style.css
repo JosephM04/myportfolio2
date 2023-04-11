@@ -392,6 +392,12 @@ body {
   background-size: cover;
   background-position: center;
 }
+.ecommerce {
+  background-image: url("../Imagenes/ecommerce.png");
+  background-size: cover;
+  background-position: center;
+}
+
 
 .cv-download {
   display: flex;
