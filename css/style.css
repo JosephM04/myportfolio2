@@ -488,7 +488,7 @@ body {
   }
 
   .proyects-description {
-    text-align: left;
+    text-align: justify;
     width: 500px;
     margin: 10px;
   }
