@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/sasstyle.css" />
     <!-- particles animation on load -->
     <link rel="stylesheet" href="css/particles.css" />
     <!-- AOS library -->
@@ -26,10 +25,13 @@
     <title>Portfolio Joseph Méndez</title>
   </head>
   <body class="body">
-    <div class="contenedor">
+    <button type="button" class="button-shake">Shake</button>
+
+    <div class="shake-div">
+      <div class="contenedor">
       <div class="bg"></div>
 
-      <div class="particles">
+      <!-- <div class="particles">
         <div class="glowing">
           <span style="--i: 1"></span>
           <span style="--i: 2"></span>
@@ -50,7 +52,7 @@
           <span style="--i: 2"></span>
           <span style="--i: 3"></span>
         </div>
-      </div>
+      </div> -->
 
       <div class="cont-navbar">
         <div class="navbar">
@@ -101,15 +103,22 @@
       </div>
     </div>
 
+
     <h2 class="tittle" data-aos="zoom-in-up">Knowledge</h2>
     <div class="tools-cont" data-aos="zoom-in-up">
       <div class="tools">
-        <!-- <h3 class="tittle-tools">HTML</h3> -->
         <img
           src="https://lenguajehtml.com/assets/logo.svg"
           alt="html icon"
           class="html"
         />
+        <button class="plus-btn">
+          <span class="plus-icon"></span>
+        </button>
+        <div class="info-box">
+          <h3 class="info-title">HTML(Hypertext Markup Language)</h3>
+          <p class="info-description">Is language used for creating web pages and other types of electronic documents that can be displayed in a web browser. </p>
+        </div>
       </div>
       <div class="tools">
         <!-- <h3 class="tittle-tools">CSS</h3> -->
@@ -118,6 +127,13 @@
           alt="css icon"
           class="css"
         />
+        <button class="plus-btn">
+          <span class="plus-icon"></span>
+        </button>
+        <div class="info-box">
+          <h3 class="info-title">CSS(Cascading Style Sheets)</h3>
+          <p class="info-description"> Allows web developers to separate the visual style of a web page from its content, making it easier to make changes to the appearance of a website</p>
+        </div>
       </div>
 
       <div class="tools">
@@ -127,22 +143,30 @@
           alt="javascript icon"
           class="javascript"
         />
+        <button class="plus-btn">
+          <span class="plus-icon"></span>
+        </button>
+        <div class="info-box">
+          <h3 class="info-title">Javascript</h3>
+          <p class="info-description"> is a programming language used for creating dynamic and interactive web pages and applications. </p>
+        </div>
       </div>
-      <!-- <div class="tools">
-         <h3 class="tittle-tools">Python</h3> 
-        <img
-          src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
-          alt="Python logo"
-          class="python"
-        />
-      </div> -->
+
       <div class="tools">
         <!-- <h3 class="tittle-tools">GIT</h3> -->
         <img
           src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
           alt="GIT image logo"
         />
+        <button class="plus-btn">
+          <span class="plus-icon"></span>
+        </button>
+        <div class="info-box">
+          <h3 class="info-title">GIT</h3>
+          <p class="info-description"> Is a distributed version control system used for tracking changes in source code during software development. </p>
+        </div>
       </div>
+
       <div class="tools">
         <!-- <h3 class="tittle-tools">Github</h3> -->
         <img
@@ -150,13 +174,30 @@
           class="github"
           alt="GitHub logo"
         />
+        <button class="plus-btn">
+          <span class="plus-icon"></span>
+        </button>
+        <div class="info-box">
+          <h3 class="info-title">GitHub</h3>
+          <p class="info-description"> is a web-based hosting service for version control repositories that use the Git system. It provides a platform for software developers to collaborate on code and manage software projects </p>
+        </div>
       </div>
+      
       <!-- <div class="tools">
         <h3 class="tittle-tools">React</h3>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
           class="react"
           alt=""
+        />
+      </div> -->
+
+      <!-- <div class="tools">
+         <h3 class="tittle-tools">Python</h3> 
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
+          alt="Python logo"
+          class="python"
         />
       </div> -->
     </div>
@@ -172,15 +213,16 @@
         </div>
         <div class="proyects-description">
           <p
-            >Amara Cedrus is a web page for showing and selling desserts
-            created with the best practices of cooking. <br />
+            >Amara Cedrus is a web page for showing and selling desserts created
+            with the best practices of cooking. <br />
             <br /><b>The project is created with css and javascript: </b> <br />
-            
-            <br /> -It has a slider in the main page that change images every 3
-            seconds.
-            <br /> -The whatsapp icon is configured with javascript, when user clicks
-            it ask if they want to order a product by whatsapp.
-            <br /> -The site is totally responsive
+
+            <br />
+            -It has a slider in the main page that change images every 3
+            seconds. <br />
+            -The whatsapp icon is configured with javascript, when user clicks
+            it ask if they want to order a product by whatsapp. <br />
+            -The site is totally responsive
           </p>
         </div>
       </div>
@@ -246,6 +288,8 @@
         </div>
       </div>
     </div>
+    </div>
+    
 
     <script src="js/headerbg.js"></script>
     <script src="js/script.js"></script>

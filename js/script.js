@@ -1,16 +1,25 @@
 "use strict";
+// button when click start shaking 
+const shakeBtn = document.querySelector(".button-shake");
+const shakeDiv = document.querySelector(".shake-div");
 
-// Animación de particulas en la pantalla de carga
-const particles = document.querySelector(".particles");
+shakeBtn.addEventListener("click", () => {
+    shakeDiv.classList.add("shake");
+    setTimeout(() => {
+        shakeDiv.classList.remove("shake");
+    }, 2000);
+});
 
-window.addEventListener("load", () => {
-    particles.style.display = "none";
-})
+// Particles while the page is loading
+// const particles = document.querySelector(".particles");
 
-// configuración para cambiar entre modo oscuro y modo claro
-const darkLight = document.querySelector(".dark");
-const dlIcon = document.querySelector(".dark-light-icon");
-// const body = document.querySelector(".body");
+// window.addEventListener("load", () => {
+//     particles.style.display = "none";
+// })
+
+//daek light mode (Desactivated)
+// const darkLight = document.querySelector(".dark");
+// const dlIcon = document.querySelector(".dark-light-icon");
 // const email = document.getElementById("email");
 // const navA = document.querySelectorAll(".nav-a-dark");
 
@@ -46,7 +55,7 @@ const dlIcon = document.querySelector(".dark-light-icon");
 //     }
 // })
 
-// menu de navegación
+// Nav menu
 
 const navBar = document.querySelector(".cont-navbar");
 const showNavBtn = document.querySelector(".button-nav");
@@ -64,3 +73,47 @@ window.addEventListener('click', e => {
         navBar.classList.toggle("show-nav");
     }
 });
+
+// Knowledge + buttons config
+const infoBtn = document.querySelectorAll(".plus-btn");
+const infoBox = document.querySelectorAll(".info-box");
+const plusIcon = document.querySelectorAll(".plus-icon");
+
+infoBtn.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        // cierra todas las otras ventanas infoBox
+        infoBox.forEach((box, boxIndex) => {
+            if (boxIndex !== index) {
+                box.classList.remove("info-box-show");
+                plusIcon[boxIndex].classList.remove("minus-icon");
+                plusIcon[boxIndex].classList.add("plus-icon");
+            }
+        });
+
+        // abre o cierra la ventana actual
+        if (infoBox[index].classList.contains("info-box-show")) {
+            hideInfoBox(index);
+        } else {
+            showInfoBox(index);
+        }
+    });
+
+    // controlador de eventos para cerrar la ventana actual al hacer clic fuera de ella
+    document.addEventListener("click", (event) => {
+        if (!infoBtn[index].contains(event.target) && !infoBox[index].contains(event.target)) {
+            hideInfoBox(index);
+        }
+    });
+});
+
+function hideInfoBox(index) {
+    infoBox[index].classList.remove("info-box-show");
+    plusIcon[index].classList.remove("minus-icon");
+    plusIcon[index].classList.add("plus-icon");
+}
+
+function showInfoBox(index) {
+    infoBox[index].classList.add("info-box-show");
+    plusIcon[index].classList.add("minus-icon");
+    plusIcon[index].classList.remove("plus-icon");
+}
