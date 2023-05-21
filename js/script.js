@@ -1,66 +1,79 @@
 "use strict";
-// button when click start shaking 
-const shakeBtn = document.querySelector(".button-shake");
-const shakeDiv = document.querySelector(".shake-div");
 
-shakeBtn.addEventListener("click", () => {
-    shakeDiv.classList.add("shake");
-    setTimeout(() => {
-        shakeDiv.classList.remove("shake");
-    }, 2000);
+// --------------------------------All sections -----------------------------------------------------
+
+// ------------------Customized cursor-----------------------------
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cursor = document.querySelector(".custom-cursor"); //Cursor is the mouse
+    let bg = document.querySelector(".mouse-background"); //mouse background is a div used to make a circle click effect 
+
+    // function to make the customized mouse get the position on the website
+    function moveCursor(e) {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+        bg.style.top = `${e.clientY}px`;
+        bg.style.left = `${e.clientX}px`;
+        bg.style.display = "block"
+    }
+
+    //when the mouse move it will call the function to get the position on the cursor and move
+    document.addEventListener("mousemove", moveCursor);
+    //  When the cursor is inside the website opacity will be 1
+    document.addEventListener("mouseenter", function () {
+        cursor.style.opacity = "1";
+        bg.style.opacity = "1"
+    });
+    // when the cursor is outside the website opacity will be 0.1
+    document.addEventListener("mouseleave", function () {
+        cursor.style.opacity = "0.1";
+        bg.style.opacity = "0.1"
+
+    });
+
+    //function to replace the normal cursor into a hand cursor in clickable elements, 
+    //the hand will replace the normal cursor if the element is an A link, a button 
+    //or the element has the "clickable-element class" 
+    document.addEventListener('mouseover', function (e) {
+        if (e.target.tagName === 'A' || e.target.classList.contains('clickable-element') || e.target.tagName === "BUTTON") {
+            cursor.classList.add('pointer');
+        } else {
+            cursor.classList.remove('pointer');
+        }
+    });
+
+    //code to make an click effect, when left click is down starts the animation
+    document.addEventListener("mousedown", () => {
+        bg.classList.add("clicked"); //"clicked" will be added to make the animation effect on click
+        setTimeout(() => {
+            bg.classList.remove("clicked"); //class will be removed after pass 1ms
+        }, 100);
+    });
+
+    //to eliminate the normal cursor
+    document.body.style.cursor = "none";
 });
 
-// Particles while the page is loading
-// const particles = document.querySelector(".particles");
+// function to know if the website if loaded in a smartphone or tablet to eliminate the customized cursor, 
+//the animation on click effect stills
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+const cursorImg = document.querySelector(".custom-cursor-img");
+if (isMobile()) {
+    cursorImg.style.display = "none";
+} else {
+    cursorImg.style.display = "block";
+}
 
-// window.addEventListener("load", () => {
-//     particles.style.display = "none";
-// })
+// ------------------------------------------------Navigation menu-----------------------------------------------
 
-//daek light mode (Desactivated)
-// const darkLight = document.querySelector(".dark");
-// const dlIcon = document.querySelector(".dark-light-icon");
-// const email = document.getElementById("email");
-// const navA = document.querySelectorAll(".nav-a-dark");
-
-// // si dl es true está activado el modo oscuro  y cambiará a modo claro, de lo contrario está en modo claro y cambiará a modo oscuro
-// let dl = true;
-
-// body.style.backgroundColor = "#1a253c";
-// body.style.color = "#f3f3f3";
-
-
-// // evento al dar click en el boton
-// darkLight.addEventListener("click", () => {
-//     for (let i = 0; i < navA.length; i++) {
-//         navA[i].classList.toggle("nav-a-light");
-//     }
-//     if (dl) {
-//         darkLight.classList.replace("dark", "light");
-//         dlIcon.classList.replace("bx-sun", "bx-moon");
-//         body.style.backgroundColor = "#fff";
-//         body.style.color = "#333";
-//         email.style.color = "#000";
-//         email.style.textShadow = "1px 1px 2px #fff";
-//         dl = false;
-//     }
-//     else {
-//         darkLight.classList.replace("light", "dark");
-//         dlIcon.classList.replace("bx-moon", "bx-sun");
-//         body.style.backgroundColor = "#1a253c";
-//         body.style.color = "#f3f3f3";
-//         email.style.color = "#fff";
-//         email.style.textShadow = "1px 1px 2px #000";
-//         dl = true;
-//     }
-// })
-
-// Nav menu
-
+//calling the elements
 const navBar = document.querySelector(".cont-navbar");
 const showNavBtn = document.querySelector(".button-nav");
 const icon = document.querySelector(".icon-nav");
 
+// When click the nav button
 showNavBtn.addEventListener('click', () => {
     navBar.classList.toggle("show-nav");
     if (navBar.classList.contains("show-nav")) icon.classList.replace("bx-chevron-down", "bx-chevron-up");
@@ -73,15 +86,19 @@ window.addEventListener('click', e => {
         navBar.classList.toggle("show-nav");
     }
 });
+//---------------------------------------------------------index section ----------------------------------------------
 
-// Knowledge + buttons config
+
+
+// KNOWLEDGE + buttons config
+
 const infoBtn = document.querySelectorAll(".plus-btn");
 const infoBox = document.querySelectorAll(".info-box");
 const plusIcon = document.querySelectorAll(".plus-icon");
 
 infoBtn.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-        // cierra todas las otras ventanas infoBox
+        // closes all the windows
         infoBox.forEach((box, boxIndex) => {
             if (boxIndex !== index) {
                 box.classList.remove("info-box-show");
@@ -90,7 +107,7 @@ infoBtn.forEach((btn, index) => {
             }
         });
 
-        // abre o cierra la ventana actual
+        // opens or closes the current window
         if (infoBox[index].classList.contains("info-box-show")) {
             hideInfoBox(index);
         } else {
@@ -98,7 +115,7 @@ infoBtn.forEach((btn, index) => {
         }
     });
 
-    // controlador de eventos para cerrar la ventana actual al hacer clic fuera de ella
+    // Event handler to close all the windows when clicked outside
     document.addEventListener("click", (event) => {
         if (!infoBtn[index].contains(event.target) && !infoBox[index].contains(event.target)) {
             hideInfoBox(index);
@@ -106,14 +123,36 @@ infoBtn.forEach((btn, index) => {
     });
 });
 
+// function to close the windows.
 function hideInfoBox(index) {
     infoBox[index].classList.remove("info-box-show");
     plusIcon[index].classList.remove("minus-icon");
     plusIcon[index].classList.add("plus-icon");
 }
 
+// function to show the windows.
 function showInfoBox(index) {
     infoBox[index].classList.add("info-box-show");
     plusIcon[index].classList.add("minus-icon");
     plusIcon[index].classList.remove("plus-icon");
+}
+
+// ------------------------------------Projects section---------------------------------------------
+
+//project container transition
+window.addEventListener("DOMContentLoaded", () => {
+    const projectContainer = document.querySelector(".project-container");
+    projectContainer.classList.add("show");
+})
+
+// button when click start shaking 
+const shakeBtn = document.querySelector(".button-shake");
+const shakeDiv = document.querySelector(".shake-div");
+if (shakeBtn) {
+    shakeBtn.addEventListener("click", () => {
+        shakeDiv.classList.add("shake");
+        setTimeout(() => {
+            shakeDiv.classList.remove("shake");
+        }, 1000);
+    });
 }

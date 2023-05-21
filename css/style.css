@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 :root {
-  --main-tittle-sscreen: 2.4rem;
-  --main-tittle-lscreen: 2.5rem;
-  --normal-text-sscreen: 1.2rem;
-  --normal-text-lscreen: 1.3rem;
-  --secondary-tittle-sscreen: 1.7rem;
-  --secondary-tittle-lscreen: 1.8rem;
+  --main-tittle-small-screen: 2.4rem;
+  --main-tittle-large-screen: 2.5rem;
+  --normal-text-small-screen: 1.2rem;
+  --normal-text-large-screen: 1.3rem;
+  --secondary-tittle-small-screen: 1.7rem;
+  --secondary-tittle-large-screen: 1.8rem;
   --main-color: #1a253c;
   --text-color: #f3f3f3;
 }
@@ -22,77 +23,180 @@ body {
   font-family: 'Barlow', sans-serif;
   background-color: var(--main-color);
   color: var(--text-color);
-  /* animation: shake 0.5s infinite; */
-}
-.button-shake {
-  position: fixed;
-  border:none;
-  bottom: 5%;
-  right: 5%;
-  /* padding:15px 20px; */
-  width: 80px;
-  height: 40px;
-  z-index: 100;
-  color: #fff;
-  background-image: url("https://i.pinimg.com/originals/54/c6/2a/54c62a08e1f3fc2066cc245422181d7b.jpg");
-  background-size: contain;
-  clip-path: polygon(10% 0, 100% 10%, 80% 90%, 0 100%);
-  transition: .1s;
+  overflow-x: hidden;
 }
 
-.button-shake:hover { 
-  font-weight: 500;
-  cursor:pointer;
-  box-shadow: 0 0 10px #58473D;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.button-shake:active {
-  box-shadow:none;
-  transform: scale(1.1);
-}
-.shake {
-    animation: shake 0.5s infinite;
-}
-
-@keyframes shake {
-  0% { transform: translate(0); }
-  10% { transform: translate(-15px, -15px) rotate(-1deg); }
-  20% { transform: translate(15px, -15px) rotate(1deg); }
-  30% { transform: translate(-15px, 15px) rotate(-1deg); }
-  40% { transform: translate(15px, 15px) rotate(1deg); }
-  50% { transform: translate(-15px, -15px) rotate(-1deg); }
-  60% { transform: translate(15px, -15px) rotate(1deg); }
-  70% { transform: translate(-15px, 15px) rotate(-1deg); }
-  80% { transform: translate(15px, 15px) rotate(1deg); }
-  90% { transform: translate(-15px, -15px) rotate(-1deg); }
-  100% { transform: translate(0); }
-}
-
-/* containter of header */
-.contenedor {
-  background-color: rgba(0, 0, 0, 0.007);
-  box-shadow:0 0 6px #aaa;
-  width: 100%;
-}
-
-/* background onmousemove on header container */
-.bg {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 238, 0, 0.5);
-  box-shadow: 0 0 50px rgb(255, 217, 0);
-  filter: blur(50px);
-  border-radius: 50%;
+/* ----------------------------------------Showing particles while page is loading config----------------------------------- */
+.particles {
+  /* display:none; */
+  background: #111;
+  width:100%;
+  height: 100%;
   position: absolute;
-  top: -15px;
+  z-index: 1000;
+}
+
+.glowing {
+  position: relative;
+  min-width: 700px;
+  height: 550px;
+  margin: -150px;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
+
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+  background: rgba(134,255,0,1);
+  box-shadow: 0 0 20px rgba(134,255,0,1),
+    0 0 40px rgba(134,255,0,1),
+    0 0 60px rgba(134,255,0,1),
+    0 0 80px rgba(134,255,0,1),
+    0 0 0 8px rgba(134,255,0,.1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+  background: rgba(255,214,0,1);
+  box-shadow: 0 0 20px rgba(255,214,0,1),
+    0 0 40px rgba(255,214,0,1),
+    0 0 60px rgba(255,214,0,1),
+    0 0 80px rgba(255,214,0,1),
+    0 0 0 8px rgba(255,214,0,.1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+  background: rgba(0,226,255,1);
+  box-shadow: 0 0 20px rgba(0,226,255,1),
+    0 0 40px rgba(0,226,255,1),
+    0 0 60px rgba(0,226,255,1),
+    0 0 80px rgba(0,226,255,1),
+    0 0 0 8px rgba(0,226,255,.1);
+}
+
+.glowing span:nth-child(3n + 1) {
+  animation: animate 1s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+  animation: animate-reverse 1s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+  animation: animate 1s alternate infinite; 
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ---------------------------------------------Custom cursor----------------------------------------------- */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: 0s;
+}
+
+.custom-cursor img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -4px;
+  left: -10px;
+}
+
+.custom-cursor.pointer {
+  cursor: none;
+}
+
+.custom-cursor.pointer img {
+  display: block;
+  content: url("../Imagenes/cursor-pointer.png");
+}
+
+/* background onmousemove effect  */
+.mouse-background {
+  display: block;
+  width: 1px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* box-shadow: 0 0 5px rgb(255, 217, 0); */
+  border-radius: 50%;
+  top: 0;
   left: -15px;
   transform: translate(-50%, -50%);
-  z-index: 3;
-  transition: 0.08s;
+  transition: transform 0.1s ease;
 }
 
-/* container for navbar */
+.mouse-background.clicked {
+  transform: scale(60);
+}
+
+/* ---------------------------------------------Nav bar container----------------------------------------------- */
+
+/* container */
 .cont-navbar {
   width: 100%;
   position: fixed;
@@ -101,6 +205,13 @@ body {
   transform: translateY(-2.5em);
 }
 
+/* class added when the button is clicked to show the nav bar (cont-navbar) */
+.show-nav {
+  transform: translateY(0);
+}
+
+
+/* container for links */
 .navbar {
   width: 100%;
   z-index: 500;
@@ -108,19 +219,14 @@ body {
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
-  position: -webkit-sticky;s
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color:#1a253caa;
 }
 
-/* Class that would be added when the arrow button is clicked to show the nav bar in mobile */
-.show-nav {
-  transform: translateY(0);
-}
-
 /* nav bar links */
-.nav-a-dark {
+.nav-a {
   border-radius: 5px;
   text-decoration: none;
   padding: 12px 16px;
@@ -128,20 +234,14 @@ body {
   color: #fff;
   font-weight: 700;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.705);
-
 }
 
+/* nav bar links hover */
 .navbar a:hover {
   text-decoration: underline;
 }
 
-.nav-a-light {
-  text-shadow: 0 0 1px #555;
-  color: #111;
-}
-
-
-/* container of the button to show and hide the nava bar */
+/* div that contains the button to show nav bar when it's clicked */
 .show-nav-btn {
   position: sticky;
   top: 0;
@@ -154,6 +254,7 @@ body {
   z-index: 550;
 }
 
+
 /* button to show and hide nav bar */
 .button-nav {
   display: flex;
@@ -163,9 +264,10 @@ body {
   font-size: 27px;
   text-shadow: 0 0 5px #fff;
   z-index: 551;
+  cursor:none;
 }
 
-/* icon inside the button (arrow) */
+/* icons inside the button ( arrow up and arrow down) */
 .bx-chevron-up .bx-chevron-down {
   font-size: 35px;
 }
@@ -184,7 +286,7 @@ body {
 
 .dark-light:hover {
   box-shadow: 0 0 8px #eee;
-  cursor: pointer;
+  
 }
 
 /* class that would be added to the button for dark mode */
@@ -204,6 +306,17 @@ body {
   transition: 0.5s;
 }
 
+
+/* ----------------------------------------------------Header----------------------------------------------------- */
+/* Header container background and particles */
+.container {
+  background-color: rgba(0, 0, 0, 0.007);
+  box-shadow:0 0 6px #aaa;
+  width: 100%;
+}
+
+
+/* Header container */
 .header-container {
   width: 100%;
   min-height: 95vh;
@@ -213,6 +326,7 @@ body {
   margin-bottom: 30px;
 }
 
+/*  */
 .header {
   display: flex;
   align-items: center;
@@ -222,16 +336,8 @@ body {
 }
 
 /* All related to profile part */
-.prof {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: transparent;
-  height: auto;
-  width: 95%;
-  padding: 20px;
-}
 
+/* Profile image Div*/
 .prof-img-div {
   margin-top: 50px;
   display: flex;
@@ -246,6 +352,7 @@ body {
   overflow: hidden;
 }
 
+/* profile image */
 .prof-img {
   filter: drop-shadow(0 -1px 3px #666);
   width: 100%;
@@ -256,6 +363,7 @@ body {
   animation: prof-img 5s infinite;
 }
 
+/* animation to img (zoom in and out */
 @keyframes prof-img {
   0% {
     transform: scale(1);
@@ -279,16 +387,17 @@ body {
   justify-content: center;
 }
 
+/* tittle for profile */
 #name {
   text-align: center;
   margin: 0 0 15px 0;
-  font-size: var(--main-tittle-sscreen);
+  font-size: var(--main-tittle-small-screen);
 }
 
-/* configuration from titles of header */
-.h-items {
+/* configuration from profile description */
+.profile-description {
   width: 100%;
-  font-size: var(--normal-text-sscreen);
+  font-size: var(--normal-text-small-screen);
   text-shadow: 1px 1px 1px #000;
   z-index: 5;
   margin-bottom: 25px;
@@ -297,39 +406,23 @@ body {
   text-shadow: 0 0 1px #555;
 }
 
-
-/*  */
-.container {
-  width: 100%;
-  z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: justify;
-}
-
-.skills {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: transparent;
-  height: auto;
-  width: 90%;
-}
-
+/* Section tittles conf */
 .tittle {
   padding: 10px;
   margin: 15px 0;
   width: 100%;
-  font-size: var(--secondary-tittle-sscreen);
-  text-align: center;
+  font-size: var(--secondary-tittle-small-screen);
+  text-align:center;
 }
 
+
 /*Content of my knowledge section */
+
 /* main container */
 .tools-cont {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
   margin: auto;
   align-items: center;
@@ -337,13 +430,13 @@ body {
   padding-bottom: 100px;
 }
 
-/* containers from img */
+/* containers for img, button, info-box(will appear when the button its clicked)*/
 .tools {
   position: relative;
   margin: 10px;
   border-radius: 15px;
-  width: calc(4em + 1vw);
-  height: calc(4em + 1vw);
+  width: calc(5.5em + 1vw);
+  height: calc(5.5em + 1vw);
   min-width: calc(3.5em + 1vw);
   min-height: calc(3.5em + 1vw);
   display: flex;
@@ -360,13 +453,14 @@ body {
   object-fit: cover;
 }
 
+/* Config for github to appreciate better the logo */
 .github {
-  background-color: rgba(200, 200, 200, 0.9)
+  background-color: rgba(230, 230, 230, 0.9)
 }
 
 /* info window */
 
-/* button to show info about every tool */
+/* button to show info about tools */
 .plus-btn {
   position: absolute;
   top: -35%;
@@ -374,25 +468,29 @@ body {
   transform: translateX(-50%);
   background-color: transparent;
   border: none;
-  font-size: 20px;
-  cursor: pointer;
+  font-size: 25px;
+  font-weight: 100;
+  color:rgba(200, 200, 200, 0.9);
   text-shadow: 0 0 10px #aaa;
   padding: 4px 8px;
 }
 
+/* hover effect to the + buttons */
 .plus-btn:hover {
-  color:rgba(200, 200, 200, 0.9);
+  color:rgba(0, 0, 0, 0.9);
 }
 
-
+/* class that will contain the button before clicked */
 .plus-icon::before {
   content: "+";
 }
 
+/* class that will contain the button after clicked */
 .minus-icon::before {
   content: "-";
 }
 
+/* pop-up windows that will show information about the things i know how to use */
 .info-box {
   width: 200px;
   position: absolute;
@@ -410,15 +508,15 @@ body {
   transition: 0.2s;
 }
 
+/* Class that will be added to info box when click the + button to show the windows */
 .info-box-show {
   opacity:1;
   transform: scale(1) translateX(-50%);
   top:5px;
-  left: 50%;
-  
+  left: 50%; 
 }
 
-.info-box::after {
+/* .info-box::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -427,102 +525,25 @@ body {
   border-width: 7px;
   border-style: solid;
   border-color: transparent transparent #ffffffcc transparent;
-}
+} */
 
+/* conf to info-box tittle */
 .info-title {
   font-size: 18px;
   margin-top: 0;
 }
 
+/* conf to info-box description */
 .info-description {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 0;
 }
 
-/* container for projects */
-.proyectos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
+/* --------------------------------------------Link to projects------------------------------------------- */
 
-.proyects-main {
-  width: 100%;
-  padding: 30px 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 1px 2px #aaa;
-}
-
-.proyects-link {
-  display: grid;
-  place-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.proyects-link>a {
-  width: 290px;
-  height: 250px;
-  line-height: 250px;
-  border-radius: 20px;
-  box-shadow: 0 0 5px #888;
-  color: #222;
-  text-shadow: 0 0 4px #fff;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 1000;
-  font-size: var(--secondary-tittle-sscreen);
-}
-
-.proyects-link>a:hover {
-  text-decoration: underline;
-}
-
-.proyects-description {
-  display: flex;
-  justify-content: baseline;
-  width: 290px;
-  height: 100%;
-  margin: 40px 20px;
-  text-align: center;
-  padding-bottom: 10px;
-  background-color: #2B395B;
-  border-radius: 15px;
-}
-
-.proyects-description p {
-  padding: 20px;
-  font-size: var(--normal-text-sscreen);
-
-}
-
-
-.amara-cedrus {
-  background-image: url("../Imagenes/AmaraCedrusMainPage.png");
-  background-size: cover;
-}
-
-.typing-game {
-  background-image: url("../Imagenes/typing-game.png");
-  background-size: cover;
-  background-position: center;
-}
-
-.ecommerce {
-  background-image: url("../Imagenes/ecommerce.png");
-  background-size: cover;
-  background-position: center;
-}
-
-
-.cv-download {
+/* --------------------------------------------Resume container---------------------------------------------*/
+.links-before-footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,12 +551,52 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* resume conf to i "Download resume" */
+.links-before-footer i {
+  overflow:hidden;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgba(185, 185, 185, 0.753) 50%, rgba(255, 255, 255, 0) 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease-out;
+}
+
+/* Resume configuration for link */
+.links-before-footer a {
+  padding: 10px 15px;
+  position:relative; 
+  display: inline-block;
+  font-size:1.4rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Resume hover i configuration for animation */
+.links-before-footer i:hover {
+  background-position: 0 100%;
+  color:#111;
+}
+
+/* Resume link visited  */
+.links-before-footer a:visited {
+  color: #dfdfdf;
+}
+
+/* Resume link hover */
+.links-before-footer a:hover {
+  color: #222;
+}
+
+/* -----------------------------------------------Footer---------------------------------------------------- */
+
+/* container */
 .footer-cont {
   width: 100%;
   padding: 20px;
   box-shadow: 0 0 3px #999;
 }
 
+/* Div footer */
 .footer {
   width: 100%;
   padding: 20px;
@@ -551,6 +612,7 @@ body {
   margin: 10px;
 }
 
+/* Linked in button container */
 #linkedin {
   display: flex;
   align-items: center;
@@ -564,37 +626,225 @@ body {
   background-color: #fff
 }
 
+/* linked In link */
 #linkedin a {
   color: #0961B8;
   text-decoration: none;
 }
 
+/* Linked In container hover */
 #linkedin:hover {
   background-color: rgba(240, 240, 240, 0.9);
 }
 
+/* Linked In button hover */
 #linkedin a:hover {
-  cursor: pointer;
+  cursor: none;
 }
 
+/* email link */
 #email {
   color: #fff;
   text-shadow: 1px 1px 2px #000;
   text-decoration: none;
 }
 
+/* Email link hover */
 #email:hover {
   text-decoration: underline;
+  cursor:none;
+}
+
+/* -----------------------------------------Projects section---------------------------------------- */
+
+/* Button i created to shake all the page configuration */
+.button-shake {
+  position: fixed;
+  border:none;
+  bottom: 5%;
+  right: 5%;
+  width: 80px;
+  height: 40px;
+  z-index: 100;
+  color: #fff;
+  background-image: url("https://i.pinimg.com/originals/54/c6/2a/54c62a08e1f3fc2066cc245422181d7b.jpg");
+  background-size: contain;
+  clip-path: polygon(10% 0, 100% 10%, 80% 90%, 0 100%);
+  transition: .2s;
+}
+
+/* button hover */
+.button-shake:hover { 
+  width: 85px;
+  height: 45px;
+  font-weight: 500;
+  box-shadow: 5px 5px 5px #ffa56d;
+}
+
+/* Active to make effect that the button was pushed */
+.button-shake:active {
+  box-shadow:none;
+  transform: scale(0.9);
+}
+
+/* Shake animation */
+.shake {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  10% { transform: translate(-15px, -15px) rotate(-1deg); }
+  20% { transform: translate(15px, -15px) rotate(1deg); }
+  30% { transform: translate(-15px, 15px) rotate(-1deg); }
+  40% { transform: translate(15px, 15px) rotate(1deg); }
+  50% { transform: translate(-15px, -15px) rotate(-1deg); }
+  60% { transform: translate(15px, -15px) rotate(1deg); }
+  70% { transform: translate(-15px, 15px) rotate(-1deg); }
+  80% { transform: translate(15px, 15px) rotate(1deg); }
+  90% { transform: translate(-15px, -15px) rotate(-1deg); }
+  100% { transform: translate(0); }
+}
+
+
+/* -----------------------------container for projects ------------------------------------*/
+/* project tittle container */
+.project-container {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color:#252425;
+  overflow:hidden;
+  opacity: 0.1;
+  transition: opacity 2s;
+}
+
+.project-container.show {
+  opacity: 1;
+}
+
+.project-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+.project-container h2 {
+  width: 100%;
+  font-size: var(--secondary-tittle-small-screen);
+  padding:10px;
+  text-align: center;
+  box-shadow:0 0 80px #1a253c;
+  background-color:#1a253c75;
+  text-shadow: 0 0 6px #666;
+}
+
+/* All projects container */
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Div for each individual project */
+.projects-main {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 1px 2px #aaa; */
+}
+
+/* link "a" div */
+.projects-link {
+  display: grid;
+  place-content: center;
+ 
+}
+
+/* link configuration */
+.projects-link>a {
+  width: 290px;
+  height: 250px;
+  line-height: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #888;
+  color: #222;
+  text-shadow: 0 0 4px #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 1000;
+  font-size: var(--secondary-tittle-small-screen);
+}
+
+/* link hover configuration */
+.projects-link>a:hover {
+text-decoration: underline;
+cursor:none;
+}
+
+/* div Description for projects  */
+.projects-description {
+display: flex;
+justify-content: baseline;
+width: 290px;
+margin: 30px 0px;
+text-align: left;
+padding-bottom: 10px;
+background-color: #2b395b25;
+border-radius: 15px;
+}
+
+/* Configuration for description text */
+.projects-description p {
+padding: 20px;
+font-size: var(--normal-text-small-screen);
+
+}
+
+/* Config for projects img */
+.amara-cedrus {
+background-image: url("../Imagenes/AmaraCedrusMainPage.png");
+background-size: cover;
+}
+
+.typing-game {
+background-image: url("../Imagenes/typing-game.png");
+background-size: cover;
+background-position: center;
+}
+
+.e-commerce {
+background-image: url("../Imagenes/ecommerce.png");
+background-size: cover;
+background-position: center;
 }
 
 /* responsive */
-@media screen and (max-width:500px) {
+
+@media screen and (min-width:600px) {
     .tools-cont {
-      flex-direction: column;
+      flex-direction: row;
     }  
 }
+
 @media screen and (min-width:768px) {
 
+  .project-container {
+    height: 80vh;
+  }
   .header {
     width: 80%;
   }
@@ -603,21 +853,24 @@ body {
     width: 80%;
   }
 
-  .proyects-link {
-    width: 60%;
-    margin: 10px;
+  .projects-main {
+    flex-direction: row;
+    align-items: center; 
+    border: 1px solid #ffffff11;
+    padding:40px 0;
+ }
+  .projects-link {
+    width: 45%;
+  }
+  .projects-link a {
+    width: 320px;
+    height:  300px;
+    line-height: 300px;
+    margin-left: 30px;
   }
 
-  .proyects-link>a {
-    width: 500px;
-    height: 450px;
-    line-height: 450px;
-  }
-
-  .proyects-description {
-    text-align: justify;
-    width: 500px;
-    margin: 10px;
+  .projects-description {
+    width: 55%;
   }
 }
 
@@ -635,6 +888,14 @@ body {
   .bar {
     height: 30px;
   }
+
+  .projects-link a {
+    margin-left: 100px;
+  }
+  .projects-description p {
+    margin-right: 50px;
+  }
+
 }
 
 @media screen and (min-width:1440px) {
@@ -647,24 +908,23 @@ body {
   }
 
   #name {
-    font-size: var(--main-tittle-lscreen)
+    font-size: var(--main-tittle-large-screen)
   }
 
   .h-items {
-    font-size: var(--normal-text-lscreen);
+    font-size: var(--normal-text-large-screen);
   }
 
   .tittle {
-    font-size: var(--secondary-tittle-lscreen);
+    font-size: var(--secondary-tittle-large-screen);
   }
 
-  .proyects-description p {
-    font-size: var(--normal-text-lscreen);
+  .projects-description p {
+    font-size: var(--normal-text-large-screen);
   }
 }
 
 @media screen and (min-width:2560px) {
-
   .header {
     width: 50%;
   }

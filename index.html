@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- particles animation on load -->
-    <link rel="stylesheet" href="css/particles.css" />
     <!-- AOS library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Fonts and icons -->
@@ -25,47 +23,24 @@
     <title>Portfolio Joseph Méndez</title>
   </head>
   <body class="body">
-    <button type="button" class="button-shake">Shake</button>
+    <div class="custom-cursor">
+      <img src="Imagenes/cursor-blue.png" alt="Personalized Cursor" class="custom-cursor-img" />
+      <div class="mouse-background"></div>
+    </div>
 
-    <div class="shake-div">
-      <div class="contenedor">
-      <div class="bg"></div>
-
-      <!-- <div class="particles">
-        <div class="glowing">
-          <span style="--i: 1"></span>
-          <span style="--i: 2"></span>
-          <span style="--i: 3"></span>
-        </div>
-        <div class="glowing">
-          <span style="--i: 1"></span>
-          <span style="--i: 2"></span>
-          <span style="--i: 3"></span>
-        </div>
-        <div class="glowing">
-          <span style="--i: 1"></span>
-          <span style="--i: 2"></span>
-          <span style="--i: 3"></span>
-        </div>
-        <div class="glowing">
-          <span style="--i: 1"></span>
-          <span style="--i: 2"></span>
-          <span style="--i: 3"></span>
-        </div>
-      </div> -->
+    <div class="container">
 
       <div class="cont-navbar">
         <div class="navbar">
-          <a class="nav-a-dark" href="#inicio">Home</a>
-          <a class="nav-a-dark" href="#proyectos">Projects</a>
-          <a class="nav-a-dark" href="#contacto">Contact</a>
+          <a class="nav-a" href="index.html">Home</a>
+          <a class="nav-a" href="projects.html">Projects</a>
           <!-- <button class="dark-light dark">
             <i class="dark-light-icon bx bx-sun"></i>
           </button> -->
         </div>
         <div class="show-nav-btn">
           <button class="button-nav">
-            <i class="icon-nav bx bx-chevron-down"></i>
+            <i class="icon-nav bx bx-chevron-down clickable-element"></i>
           </button>
         </div>
       </div>
@@ -91,7 +66,7 @@
             >
 
             <div>
-              <p class="h-items">
+              <p class="profile-description">
                 I have a Bachelor's degree in Computer Systems Engineering. Over
                 the past six months i have been studying and practicing to
                 become a front end developer and I have gained proficiency in
@@ -103,7 +78,6 @@
       </div>
     </div>
 
-
     <h2 class="tittle" data-aos="zoom-in-up">Knowledge</h2>
     <div class="tools-cont" data-aos="zoom-in-up">
       <div class="tools">
@@ -112,77 +86,90 @@
           alt="html icon"
           class="html"
         />
-        <button class="plus-btn">
-          <span class="plus-icon"></span>
+        <button class="plus-btn clickable-element">
+          <span class="plus-icon clickable-element"></span>
         </button>
         <div class="info-box">
           <h3 class="info-title">HTML(Hypertext Markup Language)</h3>
-          <p class="info-description">Is language used for creating web pages and other types of electronic documents that can be displayed in a web browser. </p>
+          <p class="info-description"
+            >Is language used for creating web pages and other types of
+            electronic documents that can be displayed in a web browser.
+          </p>
         </div>
       </div>
       <div class="tools">
-        <!-- <h3 class="tittle-tools">CSS</h3> -->
         <img
           src="https://lenguajecss.com/assets/logo.svg"
           alt="css icon"
           class="css"
         />
-        <button class="plus-btn">
-          <span class="plus-icon"></span>
+        <button class="plus-btn clickable-element">
+          <span class="plus-icon clickable-element"></span>
         </button>
         <div class="info-box">
           <h3 class="info-title">CSS(Cascading Style Sheets)</h3>
-          <p class="info-description"> Allows web developers to separate the visual style of a web page from its content, making it easier to make changes to the appearance of a website</p>
+          <p class="info-description">
+            Allows web developers to separate the visual style of a web page
+            from its content, making it easier to make changes to the appearance
+            of a website</p
+          >
         </div>
       </div>
 
       <div class="tools">
-        <!-- <h3 class="tittle-tools">Javascript</h3> -->
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTab05l3ndGtZqyqxgTeOkmB7g2eDGyYrQp60gRu108tIEXOLQTl8tf9Jpx90UiNJEIv1Q&usqp=CAU"
           alt="javascript icon"
           class="javascript"
         />
-        <button class="plus-btn">
-          <span class="plus-icon"></span>
+        <button class="plus-btn clickable-element">
+          <span class="plus-icon clickable-element"></span>
         </button>
         <div class="info-box">
           <h3 class="info-title">Javascript</h3>
-          <p class="info-description"> is a programming language used for creating dynamic and interactive web pages and applications. </p>
+          <p class="info-description">
+            is a programming language used for creating dynamic and interactive
+            web pages and applications.
+          </p>
         </div>
       </div>
 
       <div class="tools">
-        <!-- <h3 class="tittle-tools">GIT</h3> -->
         <img
           src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
           alt="GIT image logo"
         />
-        <button class="plus-btn">
-          <span class="plus-icon"></span>
+        <button class="plus-btn clickable-element">
+          <span class="plus-icon clickable-element"></span>
         </button>
         <div class="info-box">
           <h3 class="info-title">GIT</h3>
-          <p class="info-description"> Is a distributed version control system used for tracking changes in source code during software development. </p>
+          <p class="info-description">
+            Is a distributed version control system used for tracking changes in
+            source code during software development.
+          </p>
         </div>
       </div>
 
       <div class="tools">
-        <!-- <h3 class="tittle-tools">Github</h3> -->
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
           class="github"
           alt="GitHub logo"
         />
-        <button class="plus-btn">
-          <span class="plus-icon"></span>
+        <button class="plus-btn clickable-element">
+          <span class="plus-icon clickable-element"></span>
         </button>
         <div class="info-box">
           <h3 class="info-title">GitHub</h3>
-          <p class="info-description"> is a web-based hosting service for version control repositories that use the Git system. It provides a platform for software developers to collaborate on code and manage software projects </p>
+          <p class="info-description">
+            is a web-based hosting service for version control repositories that
+            use the Git system. It provides a platform for software developers
+            to collaborate on code and manage software projects
+          </p>
         </div>
       </div>
-      
+
       <!-- <div class="tools">
         <h3 class="tittle-tools">React</h3>
         <img
@@ -202,65 +189,22 @@
       </div> -->
     </div>
 
-    <h2 class="tittle" data-aos="zoom-in-up">Projects</h2>
-
-    <div data-aos="zoom-in-up" class="proyectos" id="proyectos">
-      <div class="proyects-main">
-        <div class="proyects-link">
-          <a class="amara-cedrus" href="https://amaracedrus.netlify.app/"
-            >Amara Cedrus</a
-          >
-        </div>
-        <div class="proyects-description">
-          <p
-            >Amara Cedrus is a web page for showing and selling desserts created
-            with the best practices of cooking. <br />
-            <br /><b>The project is created with css and javascript: </b> <br />
-
-            <br />
-            -It has a slider in the main page that change images every 3
-            seconds. <br />
-            -The whatsapp icon is configured with javascript, when user clicks
-            it ask if they want to order a product by whatsapp. <br />
-            -The site is totally responsive
-          </p>
-        </div>
-      </div>
-
-      <div data-aos="zoom-in-up" class="proyectos" id="proyectos">
-        <div class="proyects-main">
-          <div class="proyects-link">
-            <a class="typing-game" href="https://typegametest.netlify.app/"
-              >Type Game Test</a
-            >
-          </div>
-          <div class="proyects-description">
-            <p
-              >A mini game created to test your type speed with countries of all
-              the world, can be played for all people even on mobile and is a
-              good way to learn</p
-            >
-          </div>
-        </div>
-      </div>
-      <div data-aos="zoom-in-up" class="proyectos" id="proyectos">
-        <div class="proyects-main">
-          <div class="proyects-link">
-            <a
-              class="ecommerce"
-              href="https://ecommerce-template-proyect.netlify.app/"
-              >E-commerce</a
-            >
-          </div>
-          <div class="proyects-description">
-            <p>E-commerce website in progress...</p>
-          </div>
-        </div>
-      </div>
+    <div data-aos="zoom-in-up" class="links-before-footer">
+      <i
+        ><a
+          href="projects.html"
+          >Projects</a
+        ></i
+      >
     </div>
-
-    <div class="cv-download .cv-download-dark">
-      <!-- <i><a class="dl-cv-dark" href="Joseph Méndez Ayard Lic. Ingenieria de Sistemas y Computación.pdf">Download CV</a></i> -->
+    <div data-aos="zoom-in-up" class="links-before-footer">
+      <i
+        ><a
+          target="_blank"
+          href="Joseph Méndez Ayard Bachelor's Degree in Systems and Computer Engineering.pdf"
+          >Download Resume</a
+        ></i
+      >
     </div>
 
     <div class="footer-cont">
@@ -272,7 +216,8 @@
             title="Click to go to linkedin profile."
             target="_blank"
             tittle="Joseph Mendez Linkedin"
-            ><i class="bx bxl-linkedin"> </i
+          >
+            <i class="bx bxl-linkedin clickable-element"> </i
           ></a>
         </div>
         <div>
@@ -288,11 +233,11 @@
         </div>
       </div>
     </div>
-    </div>
-    
+    <!-- </div> -->
 
-    <script src="js/headerbg.js"></script>
+    <!-- <script src="js/headerbg.js"></script> -->
     <script src="js/script.js"></script>
+    <!-- <script src="js/index.js"></script> -->
     <!-- AOS library -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
