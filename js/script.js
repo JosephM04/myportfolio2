@@ -142,7 +142,8 @@ function showInfoBox(index) {
 //project container transition
 window.addEventListener("DOMContentLoaded", () => {
     const projectContainer = document.querySelector(".project-container");
-    projectContainer.classList.add("show");
+    projectContainer.classList.add("show"); //when content is loaded the class "show" will be added to "project-container" to change opacity:0.1 to 1
+
 })
 
 // button when click start shaking 
