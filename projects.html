@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css for projects -->
+    <!-- <link rel="stylesheet" href="css/projects.css" /> -->
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- particles animation on load -->
+    <!-- <link rel="stylesheet" href="css/particles.css" /> -->
+    <!-- AOS library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Fonts and icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,700;1,100&family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio Joseph Méndez</title>
+  </head>
+  <body class="body">
+    <div class="custom-cursor">
+      <img src="Imagenes/cursor-blue.png" alt="Personalized Cursor" class="custom-cursor-img"/>
+      <div class="mouse-background"></div>
+    </div>
+
+    <button type="button" class="button-shake">Shake</button>
+
+    <div class="shake-div">
+      <div class="container">
+
+        
+        <div class="cont-navbar">
+          <div class="navbar">
+            <a class="nav-a" href="index.html">Home</a>
+            <a class="nav-a" href="projects.html">Projects</a>
+            <!-- <button class="dark-light dark">
+            <i class="dark-light-icon bx bx-sun"></i>
+          </button> -->
+          </div>
+          <div class="show-nav-btn">
+            <button class="button-nav">
+              <i class="icon-nav bx bx-chevron-down clickable-element"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-container">
+          <video id="programming-vid"  autoplay loop muted>
+            <source src="./videos/programming-vid.mp4" type="video/mp4">
+          </video>
+          <h2 data-aos="zoom-in-up">Projects</h2>
+        </div>
+
+        <div data-aos="zoom-in-up">
+          <div class="projects-main">
+            <div class="projects-link">
+              <a class="amara-cedrus" href="https://amaracedrus.netlify.app/"
+                >Amara Cedrus</a
+              >
+            </div>
+            <div class="projects-description">
+              <p
+                >Amara Cedrus is a web page for showing and selling desserts
+                created with the best practices of cooking. <br />
+                <br /><b>The project is created with css and javascript: </b>
+                <br />
+
+                <br />
+                -It has a slider in the main page that change images every 3
+                seconds. <br />
+                -The whatsapp icon is configured with javascript, when user
+                clicks it ask if they want to order a product by whatsapp.
+                <br />
+                -The site is totally responsive
+              </p>
+            </div>
+          </div>
+
+          <div data-aos="zoom-in-up">
+            <div class="projects-main">
+              <div class="projects-link">
+                <a class="typing-game" href="https://typegametest.netlify.app/"
+                  >Type Game Test</a
+                >
+              </div>
+              <div class="projects-description">
+                <p
+                  >A mini game created to test your type speed with countries of
+                  all the world, can be played for all people even on mobile and
+                  is a good way to learn</p
+                >
+              </div>
+            </div>
+          </div>
+          <div data-aos="zoom-in-up">
+            <div class="projects-main">
+              <div class="projects-link">
+                <a
+                  class="e-commerce"
+                  href="https://ecommerce-template-proyect.netlify.app/"
+                  >E-commerce</a
+                >
+              </div>
+              <div class="projects-description">
+                <p>E-commerce website in progress...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-cont">
+          <h2 class="tittle">Contact:</h2>
+          <div class="footer" id="contacto">
+            <div id="linkedin">
+              <a
+                href="https://www.linkedin.com/in/joseph-m%C3%A9ndez/"
+                title="Click to go to linkedin profile."
+                target="_blank"
+                tittle="Joseph Mendez Linkedin"
+              >
+                <i class="bx bxl-linkedin clickable-element"> </i
+              ></a>
+            </div>
+            <div>
+              <p id="pemail">
+                Email:
+                <a
+                  id="email"
+                  href="mailto: j.mendez0434@gmail.com"
+                  title="Click to send e-mail"
+                  >j.mendez0434@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="js/headerbg.js"></script> -->
+    <!-- <script src="js/projects.js"></script> -->
+    <script src="js/script.js"></script>
+    <!-- AOS library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
