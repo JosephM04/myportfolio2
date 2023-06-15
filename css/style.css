@@ -186,12 +186,14 @@ body {
   border-radius: 50%;
   top: 0;
   left: -15px;
+  opacity: 0.1;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease;
 }
 
 .mouse-background.clicked {
   transform: scale(60);
+  opacity: 1;
 }
 
 /* ---------------------------------------------Nav bar container----------------------------------------------- */
@@ -516,7 +518,7 @@ body {
   left: 50%; 
 }
 
-/* .info-box::after {
+.info-box::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -525,7 +527,7 @@ body {
   border-width: 7px;
   border-style: solid;
   border-color: transparent transparent #ffffffcc transparent;
-} */
+}
 
 /* conf to info-box tittle */
 .info-title {
@@ -831,6 +833,13 @@ background-image: url("../Imagenes/ecommerce.png");
 background-size: cover;
 background-position: center;
 }
+
+.theater {
+background-image: url("../Imagenes/movie-theater.png");
+background-size: cover;
+background-position: center;
+}
+
 
 /* responsive */
 
