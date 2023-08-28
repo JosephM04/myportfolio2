@@ -603,24 +603,21 @@ body {
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
+
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-}
-
-.footer>* {
-  margin: 10px;
 }
 
 /* Linked in button container */
-#linkedin {
+.links-profiles {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
-  border: 1px solid ddd;
+  border: 1px solid #ddd;
+  margin: 5px 15px;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -629,20 +626,32 @@ body {
 }
 
 /* linked In link */
-#linkedin a {
-  color: #0961B8;
+.links-profiles a {
   text-decoration: none;
 }
 
+#linkedin a {
+  color: #0961B8;
+  font-size: 1.5rem;
+
+}
+
+#github a {
+  color:rgba(0, 0, 0, 0.705);
+  font-size: 2rem;
+}
+
+
 /* Linked In container hover */
-#linkedin:hover {
+.links-profiles:hover {
   background-color: rgba(240, 240, 240, 0.9);
 }
 
 /* Linked In button hover */
-#linkedin a:hover {
+.links-profiles a:hover {
   cursor: none;
 }
+
 
 /* email link */
 #email {
