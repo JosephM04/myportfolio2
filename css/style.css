@@ -549,12 +549,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65px;
+  height: 80px;
   background: rgba(255, 255, 255, 0.1);
 }
 
 /* resume conf to i "Download resume" */
 .links-before-footer i {
+  width: 100%;
   overflow:hidden;
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(185, 185, 185, 0.753) 50%, rgba(255, 255, 255, 0) 50%);
   background-size: 200% 100%;
@@ -564,14 +565,17 @@ body {
 
 /* Resume configuration for link */
 .links-before-footer a {
-  padding: 10px 15px;
+  width: 100%;
+  padding:  25px 0px;
   position:relative; 
   display: inline-block;
   font-size:1.4rem;
   font-weight: 800;
+  text-align: center;
   color: #fff;
   text-decoration: none;
 }
+
 
 /* Resume hover i configuration for animation */
 .links-before-footer i:hover {
@@ -588,6 +592,7 @@ body {
 .links-before-footer a:hover {
   color: #222;
 }
+
 
 /* -----------------------------------------------Footer---------------------------------------------------- */
 
