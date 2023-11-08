@@ -838,6 +838,7 @@ font-size: var(--normal-text-small-screen);
   display: flex;
   flex-direction: row;
   justify-content:center;
+  align-items: center;
 }
 .tools-used b {
   padding:5px;
@@ -846,6 +847,7 @@ font-size: var(--normal-text-small-screen);
 .tools-used img {
   width: 30px;
   margin: 0 3px;
+  
 }
 
 /* Config for projects img */
@@ -860,10 +862,10 @@ background-size: cover;
 background-position: center;
 }
 
-.e-commerce {
-background-image: url("../Imagenes/ecommerce.png");
+.todo-list {
+background-image: url("../Imagenes/todo-list-app.png");
 background-size: cover;
-background-position: center;
+background-position: left;
 }
 
 .theater {
