@@ -35,7 +35,7 @@ body {
 .particles {
   /* display:none; */
   background: #111;
-  width:100%;
+  width: 100%;
   height: 100%;
   position: absolute;
   z-index: 1000;
@@ -59,6 +59,7 @@ body {
     filter: hue-rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     filter: hue-rotate(360deg);
     transform: rotate(360deg);
@@ -85,30 +86,30 @@ body {
 }
 
 .glowing span:nth-child(3n + 1)::before {
-  background: rgba(134,255,0,1);
-  box-shadow: 0 0 20px rgba(134,255,0,1),
-    0 0 40px rgba(134,255,0,1),
-    0 0 60px rgba(134,255,0,1),
-    0 0 80px rgba(134,255,0,1),
-    0 0 0 8px rgba(134,255,0,.1);
+  background: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+    0 0 40px rgba(134, 255, 0, 1),
+    0 0 60px rgba(134, 255, 0, 1),
+    0 0 80px rgba(134, 255, 0, 1),
+    0 0 0 8px rgba(134, 255, 0, .1);
 }
 
 .glowing span:nth-child(3n + 2)::before {
-  background: rgba(255,214,0,1);
-  box-shadow: 0 0 20px rgba(255,214,0,1),
-    0 0 40px rgba(255,214,0,1),
-    0 0 60px rgba(255,214,0,1),
-    0 0 80px rgba(255,214,0,1),
-    0 0 0 8px rgba(255,214,0,.1);
+  background: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+    0 0 40px rgba(255, 214, 0, 1),
+    0 0 60px rgba(255, 214, 0, 1),
+    0 0 80px rgba(255, 214, 0, 1),
+    0 0 0 8px rgba(255, 214, 0, .1);
 }
 
 .glowing span:nth-child(3n + 3)::before {
-  background: rgba(0,226,255,1);
-  box-shadow: 0 0 20px rgba(0,226,255,1),
-    0 0 40px rgba(0,226,255,1),
-    0 0 60px rgba(0,226,255,1),
-    0 0 80px rgba(0,226,255,1),
-    0 0 0 8px rgba(0,226,255,.1);
+  background: rgba(0, 226, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+    0 0 40px rgba(0, 226, 255, 1),
+    0 0 60px rgba(0, 226, 255, 1),
+    0 0 80px rgba(0, 226, 255, 1),
+    0 0 0 8px rgba(0, 226, 255, .1);
 }
 
 .glowing span:nth-child(3n + 1) {
@@ -120,16 +121,18 @@ body {
 }
 
 .glowing span:nth-child(3n + 3) {
-  animation: animate 1s alternate infinite; 
+  animation: animate 1s alternate infinite;
 }
 
 @keyframes animate {
   0% {
     transform: rotate(180deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -139,11 +142,11 @@ body {
   0% {
     transform: rotate(360deg);
   }
-  
+
   50% {
     transform: rotate(180deg);
   }
-  
+
   100% {
     transform: rotate(0deg);
   }
@@ -224,7 +227,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color:#1a253caa;
+  background-color: #1a253caa;
 }
 
 /* nav bar links */
@@ -266,7 +269,7 @@ body {
   font-size: 27px;
   text-shadow: 0 0 5px #fff;
   z-index: 551;
-  cursor:none;
+  cursor: none;
 }
 
 /* icons inside the button ( arrow up and arrow down) */
@@ -288,7 +291,7 @@ body {
 
 .dark-light:hover {
   box-shadow: 0 0 8px #eee;
-  
+
 }
 
 /* class that would be added to the button for dark mode */
@@ -313,7 +316,7 @@ body {
 /* Header container background and particles */
 .container {
   background-color: rgba(0, 0, 0, 0.007);
-  box-shadow:0 0 6px #aaa;
+  box-shadow: 0 0 6px #aaa;
   width: 100%;
 }
 
@@ -414,7 +417,7 @@ body {
   margin: 15px 0;
   width: 100%;
   font-size: var(--secondary-tittle-small-screen);
-  text-align:center;
+  text-align: center;
 }
 
 
@@ -473,14 +476,14 @@ body {
   border: none;
   font-size: 25px;
   font-weight: 100;
-  color:rgba(200, 200, 200, 0.9);
+  color: rgba(200, 200, 200, 0.9);
   text-shadow: 0 0 10px #aaa;
   padding: 4px 8px;
 }
 
 /* hover effect to the + buttons */
 .plus-btn:hover {
-  color:rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 /* class that will contain the button before clicked */
@@ -497,26 +500,26 @@ body {
 .info-box {
   width: 200px;
   position: absolute;
-  left:-100%;
-  top:-100%;
-  transform:scale(0) translateX(-50%) translateY(-50%) ;
+  left: -100%;
+  top: -100%;
+  transform: scale(0) translateX(-50%) translateY(-50%);
   display: block;
-  background-color:#ffffffcc;
+  background-color: #ffffffcc;
   color: #222;
   border-radius: 6px;
-  padding:10px;
+  padding: 10px;
   margin: 5px;
   z-index: 5;
-  opacity:0;
+  opacity: 0;
   transition: 0.2s;
 }
 
 /* Class that will be added to info box when click the + button to show the windows */
 .info-box-show {
-  opacity:1;
+  opacity: 1;
   transform: scale(1) translateX(-50%);
-  top:5px;
-  left: 50%; 
+  top: 5px;
+  left: 50%;
 }
 
 .info-box::after {
@@ -557,7 +560,7 @@ body {
 /* resume conf to i "Download resume" */
 .links-before-footer i {
   width: 100%;
-  overflow:hidden;
+  overflow: hidden;
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(185, 185, 185, 0.753) 50%, rgba(255, 255, 255, 0) 50%);
   background-size: 200% 100%;
   background-position: 100%;
@@ -567,10 +570,10 @@ body {
 /* Resume configuration for link */
 .links-before-footer a {
   width: 100%;
-  padding:  25px 0px;
-  position:relative; 
+  padding: 25px 0px;
+  position: relative;
   display: inline-block;
-  font-size:1.4rem;
+  font-size: 1.4rem;
   font-weight: 800;
   text-align: center;
   color: #fff;
@@ -581,7 +584,7 @@ body {
 /* Resume hover i configuration for animation */
 .links-before-footer i:hover {
   background-position: 0 100%;
-  color:#111;
+  color: #111;
 }
 
 /* Resume link visited  */
@@ -643,7 +646,7 @@ body {
 }
 
 #github a {
-  color:rgba(0, 0, 0, 0.705);
+  color: rgba(0, 0, 0, 0.705);
   font-size: 2rem;
 }
 
@@ -669,7 +672,7 @@ body {
 /* Email link hover */
 #email:hover {
   text-decoration: underline;
-  cursor:none;
+  cursor: none;
 }
 
 /* -----------------------------------------Projects section---------------------------------------- */
@@ -677,7 +680,7 @@ body {
 /* Button i created to shake all the page configuration */
 .button-shake {
   position: fixed;
-  border:none;
+  border: none;
   bottom: 5%;
   right: 5%;
   width: 80px;
@@ -691,7 +694,7 @@ body {
 }
 
 /* button hover */
-.button-shake:hover { 
+.button-shake:hover {
   width: 85px;
   height: 45px;
   font-weight: 500;
@@ -700,40 +703,72 @@ body {
 
 /* Active to make effect that the button was pushed */
 .button-shake:active {
-  box-shadow:none;
+  box-shadow: none;
   transform: scale(0.9);
 }
 
 /* Shake animation */
 .shake {
-    animation: shake 0.5s infinite;
+  animation: shake 0.5s infinite;
 }
 
 @keyframes shake {
-  0% { transform: translate(0); }
-  10% { transform: translate(-15px, -15px) rotate(-1deg); }
-  20% { transform: translate(15px, -15px) rotate(1deg); }
-  30% { transform: translate(-15px, 15px) rotate(-1deg); }
-  40% { transform: translate(15px, 15px) rotate(1deg); }
-  50% { transform: translate(-15px, -15px) rotate(-1deg); }
-  60% { transform: translate(15px, -15px) rotate(1deg); }
-  70% { transform: translate(-15px, 15px) rotate(-1deg); }
-  80% { transform: translate(15px, 15px) rotate(1deg); }
-  90% { transform: translate(-15px, -15px) rotate(-1deg); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-15px, -15px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(15px, -15px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(-15px, 15px) rotate(-1deg);
+  }
+
+  40% {
+    transform: translate(15px, 15px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-15px, -15px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(15px, -15px) rotate(1deg);
+  }
+
+  70% {
+    transform: translate(-15px, 15px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(15px, 15px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(-15px, -15px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 
 /* -----------------------------container for projects ------------------------------------*/
 /* project tittle container */
 .project-container {
-  position:relative;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50vh;
-  background-color:#252425;
-  overflow:hidden;
+  background-color: #252425;
+  overflow: hidden;
   opacity: 0.1;
   transition: opacity 2s;
 }
@@ -746,8 +781,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center;
 }
@@ -756,10 +791,10 @@ body {
 .project-container h2 {
   width: 100%;
   font-size: var(--secondary-tittle-small-screen);
-  padding:10px;
+  padding: 10px;
   text-align: center;
-  box-shadow:0 0 80px #1a253c;
-  background-color:#1a253c75;
+  box-shadow: 0 0 80px #1a253c;
+  background-color: #1a253c75;
   text-shadow: 0 0 6px #666;
 }
 
@@ -788,7 +823,7 @@ body {
 .projects-link {
   display: grid;
   place-content: center;
- 
+
 }
 
 /* link configuration */
@@ -798,89 +833,97 @@ body {
   line-height: 250px;
   border-radius: 20px;
   box-shadow: 0 0 5px #888;
-  color: #222;
-  text-shadow: 0 0 4px #fff;
+  color: #eee;
+  text-shadow: 1px 1px 10px #111;
   text-decoration: none;
   text-align: center;
-  font-weight: 1000;
+  font-weight: bold;
   font-size: var(--secondary-tittle-small-screen);
+  transition: .3s ease-in-out;
 }
 
 /* link hover configuration */
 .projects-link>a:hover {
-text-decoration: underline;
-cursor:none;
+  text-decoration: underline;
+  cursor: none;
+  color: #222;
+  text-shadow: 1px 1px 10px #fff;
 }
 
 /* div Description for projects  */
 .projects-description {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 290px;
-margin: 30px 0px;
-text-align: left;
-padding-bottom: 10px;
-background-color: #2b395b25;
-border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 290px;
+  margin: 30px 0px;
+  text-align: left;
+  padding-bottom: 10px;
+  background-color: #2b395b25;
+  border-radius: 15px;
 }
 
 /* Configuration for description text */
 .projects-description p {
-padding: 20px;
-font-size: var(--normal-text-small-screen);
-
+  padding: 20px;
+  font-size: var(--normal-text-small-screen);
 }
 
 .tools-used {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
+
 .tools-used b {
-  padding:5px;
+  padding: 5px;
 }
 
 .tools-used img {
   width: 30px;
   margin: 0 3px;
-  
+
 }
 
 /* Config for projects img */
 .amara-cedrus {
-background-image: url("../Imagenes/AmaraCedrusMainPage.png");
-background-size: cover;
+  background-image: url("../Imagenes/AmaraCedrusMainPage.png");
+  background-size: cover;
 }
 
 .typing-game {
-background-image: url("../Imagenes/typing-game.png");
-background-size: cover;
-background-position: center;
+  background-image: url("../Imagenes/typing-game.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .todo-list {
-background-image: url("../Imagenes/todo-list-app.png");
-background-size: cover;
-background-position: left;
+  background-image: url("../Imagenes/todo-list-app.png");
+  background-size: cover;
+  background-position: left;
+}
+
+.tic-tac-toe {
+  background-image: url("../Imagenes/tic-tac-toe-react.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .theater {
-background-image: url("../Imagenes/movie-theater.png");
-background-size: cover;
-background-position: center;
+  background-image: url("../Imagenes/movie-theater.png");
+  background-size: cover;
+  background-position: center;
 }
-
 
 /* responsive */
 
 @media screen and (min-width:600px) {
-    .tools-cont {
-      flex-direction: row;
-    }  
+  .tools-cont {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width:768px) {
@@ -888,6 +931,7 @@ background-position: center;
   .project-container {
     height: 80vh;
   }
+
   .header {
     width: 80%;
   }
@@ -898,16 +942,18 @@ background-position: center;
 
   .projects-main {
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
     border: 1px solid #ffffff11;
-    padding:40px 0;
- }
+    padding: 40px 0;
+  }
+
   .projects-link {
     width: 45%;
   }
+
   .projects-link a {
     width: 320px;
-    height:  300px;
+    height: 300px;
     line-height: 300px;
     margin-left: 30px;
   }
@@ -935,6 +981,7 @@ background-position: center;
   .projects-link a {
     margin-left: 100px;
   }
+
   .projects-description p {
     margin-right: 50px;
   }
